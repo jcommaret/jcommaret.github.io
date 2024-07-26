@@ -2,20 +2,23 @@
 import { IonIcon } from '@ionic/react';
 
 // Icons
-import { chevronDown } from 'ionicons/icons';
+import { chevronDown, logoGithub } from 'ionicons/icons';
 import { mailOutline } from 'ionicons/icons';
 import { calendarOutline } from 'ionicons/icons';
 import { locationOutline } from 'ionicons/icons';
 import { phonePortraitOutline } from 'ionicons/icons';
 import { logoTwitter } from 'ionicons/icons';
-import { logoInstagram } from 'ionicons/icons';
+import { logoMedium } from 'ionicons/icons';
+
+// Images
+import img from '../assets/assets/images/images';
 
 function Sidebar() {
   return (
     <aside className="sidebar" data-sidebar>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80"></img>
+          <img src={img.myAvatar} alt="Jérôme Commaret" width="80"></img>
         </figure>
         <div className="info-content">
           <h1 className="name" title="Richard hanrick">Jérôme Commaret</h1>
@@ -86,7 +89,12 @@ function Sidebar() {
 
           <li className="social-item">
             <a href="#" className="social-link">
-              <IonIcon icon={logoInstagram}></IonIcon>
+              <IonIcon icon={logoMedium}></IonIcon>
+            </a>
+          </li>
+          <li className="social-item">
+            <a href="#" className="social-link">
+              <IonIcon icon={logoGithub}></IonIcon>
             </a>
           </li>
         </ul>
