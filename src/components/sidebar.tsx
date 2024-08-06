@@ -18,11 +18,11 @@ function Sidebar() {
     <aside className="sidebar" data-sidebar>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src={img.myAvatar} alt="Jérôme Commaret" width="80"></img>
+          <img src={img.myAvatar} alt="Jérôme Commaret" width="80" />
         </figure>
         <div className="info-content">
           <h1 className="name" title="Richard hanrick">Jérôme Commaret</h1>
-          <p className="title">Lead / Front-End developer</p>
+          <p className="title">Développeur React.js/Native</p>
         </div>
 
         <button className="info_more-btn" data-sidebar-btn>

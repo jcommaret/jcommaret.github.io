@@ -4,7 +4,6 @@ function Navbar(){
     return(
       <nav className="navbar">
           <ul className="navbar-list">
-            
             <li className="navbar-item">
               <NavLink to="/about" className="navbar-link" title="A propos">A propos</NavLink>
             </li>
@@ -18,13 +17,12 @@ function Navbar(){
             </li>
 
             <li className="navbar-item">
-              <button className="navbar-link" data-nav-link>Blog</button>
+              <NavLink to="/blog" className="navbar-link" title="Blog">Blog</NavLink>
             </li>
 
             <li className="navbar-item">
-              <button className="navbar-link" data-nav-link>Contact</button>
+              <NavLink to="/contact" className="navbar-link" title="Contact">Contact</NavLink>
             </li>
-
           </ul>
       </nav>
     )

@@ -1,3 +1,10 @@
+// Library
+import { IonIcon } from '@ionic/react';
+
+// Icons
+import { bookOutline } from 'ionicons/icons';
+
+
 function Resume() {
   return(
     <article className="resume active">
@@ -8,7 +15,7 @@ function Resume() {
         <section className="timeline">
           <div className="title-wrapper">
             <div className="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <IonIcon icon={bookOutline} />
             </div>
 
             <h3 className="h3">Scolarité et certifications</h3>
@@ -17,7 +24,7 @@ function Resume() {
           <ol className="timeline-list">
             
             <li className="timeline-item">
-              <h4 className="h4 timeline-item-title">OpenclassNamerooms</h4>
+              <h4 className="h4 timeline-item-title">Openclassrooms</h4>
               <span>2021 — 2022</span>
               <p className="timeline-text">
                 Formation de développeur d'applications javascript/react
@@ -45,7 +52,7 @@ function Resume() {
         <section className="timeline">
           <div className="title-wrapper">
             <div className="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <IonIcon icon={bookOutline} />
             </div>
             <h3 className="h3">Experience</h3>
           </div>
