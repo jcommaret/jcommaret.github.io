@@ -1,7 +1,8 @@
 function Resume() {
-<article className="resume" data-page="resume">
+  return(
+    <article className="resume active">
         <header>
-          <h2 className="h2 article-title">Resume</h2>
+          <h2 className="h2 article-title">CV</h2>
         </header>
 
         <section className="timeline">
@@ -89,7 +90,7 @@ function Resume() {
                 <data value="80">80%</data>
               </div>
               <div className="skill-progress-bg">
-                <div className="skill-progress-fill" style="width: 80%;"></div>
+                <div className="skill-progress-fill"></div>
               </div>
             </li>
 
@@ -99,7 +100,7 @@ function Resume() {
                 <data value="70">70%</data>
               </div>
               <div className="skill-progress-bg">
-                <div className="skill-progress-fill" style="width: 70%;"></div>
+                <div className="skill-progress-fill"></div>
               </div>
             </li>
 
@@ -109,7 +110,7 @@ function Resume() {
                 <data value="90">90%</data>
               </div>
               <div className="skill-progress-bg">
-                <div className="skill-progress-fill" style="width: 90%;"></div>
+                <div className="skill-progress-fill"></div>
               </div>
             </li>
 
@@ -119,11 +120,12 @@ function Resume() {
                 <data value="50">50%</data>
               </div>
               <div className="skill-progress-bg">
-                <div className="skill-progress-fill" style="width: 50%;"></div>
+                <div className="skill-progress-fill"></div>
               </div>
             </li>
           </ul>
         </section>
       </article>
+    );
 }
 export default Resume;

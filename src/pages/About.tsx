@@ -1,11 +1,16 @@
+
+// Images
+import img from '../assets/assets/images/images';
+
 function About() {
-    <article className="about  active" data-page="about">
+    return(
+        <article className="about  active" data-page="about">
         <header>
-            <h2 className="h2 article-title">About</h2>
+            <h2 className="h2 article-title">A propos</h2>
         </header>
             
         <section className="about-text">
-            <p>Je suis un Lead dev Front basé a Paris, je travaille sur des sites web et des applications mobiles. Avec un regard porté sur les perfonmances, je code, je manage, et j'innove.</p>
+            <p>Je suis un Dev Front React basé a Paris, je travaille sur des sites web et des applications mobiles. Avec un regard porté sur les perfonmances, je code, je manage, et j'innove.</p>
             <p>Polyvalent, j'ai déjà travaillé pour des grands groupes internationnaux mais également pour des startups.J'ai une très bonne maitrise de la chaine de production grâce à des expériences en gestion de projet technique et fonctionnelle.</p>
         </section>
 
@@ -14,7 +19,7 @@ function About() {
         <ul className="service-list">
             <li className="service-item">
             <div className="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40"></img>
+                <img className='service-icon-icon' src={img.iconDev} alt="Web development icon" width="40"></img>
             </div>
 
             <div className="service-content-box">
@@ -25,7 +30,7 @@ function About() {
 
             <li className="service-item">
             <div className="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40"></img>
+                <img src={img.iconApp} alt="mobile app icon" width="40"></img>
             </div>
 
             <div className="service-content-box">
@@ -109,10 +114,10 @@ function About() {
                 </div>
 
                 <div className="modal-content">
-                    <h4 className="h3 modal-title" data-modal-title><!--Replaced with data--></h4>
+                    <h4 className="h3 modal-title" data-modal-title>e</h4>
                     <div data-modal-text>
                         <p>
-                        ## replaced with text
+                            I had the pleasure to work with Jérôme and if you need someone who has great managerial skills and who is also a technical profile, you should definitely hire him. His knowledge of the production chain makes him great at doing what he does. He is a person who can adapt and learn quickly, and his mobile / e-commerce and localisation skills, makes him a valuable person in every teams, to build really great digital product.
                         </p>
                     </div>
                 </div>
@@ -131,5 +136,6 @@ function About() {
                 </ul>
             </section>
     </article> 
+    );
 }
 export default About;

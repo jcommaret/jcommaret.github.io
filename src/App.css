@@ -1404,6 +1404,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-top: 5px;
   }
 
+  .service-icon-img { width: 40px; 
+  }
+  
   .service-content-box { text-align: left; }
 
   /* testimonials */

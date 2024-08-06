@@ -1,5 +1,6 @@
 function Portfolio() {
-<article className="portfolio" data-page="portfolio">
+  return(
+      <article className="portfolio active">
         <header>
           <h2 className="h2 article-title">Portfolio</h2>
         </header>
@@ -69,8 +70,7 @@ function Portfolio() {
                   <div className="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">Finance</h3>
@@ -88,7 +88,7 @@ function Portfolio() {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">Orizon</h3>
@@ -106,7 +106,7 @@ function Portfolio() {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">Fundo</h3>
@@ -124,7 +124,7 @@ function Portfolio() {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">Brawlhalla</h3>
@@ -142,7 +142,7 @@ function Portfolio() {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">DSM.</h3>
@@ -160,7 +160,7 @@ function Portfolio() {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">MetaSpark</h3>
@@ -178,7 +178,7 @@ function Portfolio() {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">Summary</h3>
@@ -196,7 +196,7 @@ function Portfolio() {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">Task Manager</h3>
@@ -214,7 +214,7 @@ function Portfolio() {
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy"></img>
                 </figure>
 
                 <h3 className="project-title">Arrival</h3>
@@ -229,5 +229,6 @@ function Portfolio() {
         </section>
 
       </article>
-      }
+  );
+}
 export default Portfolio;
