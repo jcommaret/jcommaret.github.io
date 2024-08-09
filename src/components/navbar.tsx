@@ -21,7 +21,7 @@ function Navbar(){
             </li>
 
             <li className="navbar-item">
-              <NavLink to="/contact" className="navbar-link" title="Contact">Contact</NavLink>
+              <NavLink to="https://calendly.com/jcommaret/" className="navbar-link" title="Contact">Contact</NavLink>
             </li>
           </ul>
       </nav>

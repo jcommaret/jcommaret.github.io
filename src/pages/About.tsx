@@ -1,5 +1,8 @@
+import { IonIcon } from '@ionic/react';
 // Images
 import img from '../assets/assets/images/images';
+// Icons
+import { closeOutline } from 'ionicons/icons';
 
 function About() {
     return(
@@ -44,7 +47,7 @@ function About() {
                 <li className="testimonials-item">
                 <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
-                        <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar />
+                        <img src={img.avatarImage1} alt="Daniel lewis" width="60" data-testimonials-avatar />
                     </figure>
                     <h4 className="h4 testimonials-item-title" data-testimonials-title>Rhose E.</h4>
                     <div className="testimonials-text" data-testimonials-text>
@@ -55,7 +58,7 @@ function About() {
                 <li className="testimonials-item">
                 <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
-                        <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar />
+                        <img src={img.avatarImage2} alt="Jessica miller" width="60" data-testimonials-avatar />
                     </figure>
                     <h4 className="h4 testimonials-item-title" data-testimonials-title>Nathalie D.</h4>
                     <div className="testimonials-text" data-testimonials-text>
@@ -66,7 +69,7 @@ function About() {
                 <li className="testimonials-item">
                 <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
-                        <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar />
+                        <img src={img.avatarImage3} alt="Emily evans" width="60" data-testimonials-avatar />
                     </figure>
                     <h4 className="h4 testimonials-item-title" data-testimonials-title>Camille R.</h4>
                     <div className="testimonials-text" data-testimonials-text>
@@ -77,7 +80,7 @@ function About() {
                 <li className="testimonials-item">
                 <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
-                        <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar />
+                        <img src={img.avatarImage4} alt="Henry william" width="60" data-testimonials-avatar />
                     </figure>
                     <h4 className="h4 testimonials-item-title" data-testimonials-title>Julien K.</h4>
                     <div className="testimonials-text" data-testimonials-text>
@@ -91,13 +94,13 @@ function About() {
             <div className="overlay" data-overlay></div>
             <section className="testimonials-modal">
                 <button className="modal-close-btn" data-modal-close-btn>
-                    <ion-icon name="close-outline"></ion-icon>
+                    <IonIcon icon={closeOutline}></IonIcon>
                 </button>
                 <div className="modal-img-wrapper">
                 <figure className="modal-avatar-box">
-                    <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img />
+                    <img src={img.avatarImage1} alt="Daniel lewis" width="80" data-modal-img />
                 </figure>
-                    <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+                    <img src={img.iconQuote} alt="quote icon" />
                 </div>
                 <div className="modal-content">
                     <h4 className="h3 modal-title" data-modal-title>e</h4>
@@ -107,17 +110,6 @@ function About() {
                 </div>
             </section>
             </div>
-            <section className="clients">
-                <h3 className="h3 clients-title">Clients</h3>
-                <ul className="clients-list has-scrollbar">
-                    <li className="clients-item"><a href="#"><img src="./assets/images/logo-1-color.png" alt="client logo" /></a></li>
-                    <li className="clients-item"><a href="#"><img src="./assets/images/logo-2-color.png" alt="client logo" /></a></li>
-                    <li className="clients-item"><a href="#"><img src="./assets/images/logo-3-color.png" alt="client logo" /></a></li>
-                    <li className="clients-item"><a href="#"><img src="./assets/images/logo-4-color.png" alt="client logo" /></a></li>
-                    <li className="clients-item"><a href="#"><img src="./assets/images/logo-5-color.png" alt="client logo" /></a></li>
-                    <li className="clients-item"><a href="#"><img src="./assets/images/logo-6-color.png" alt="client logo" /></a></li>
-                </ul>
-            </section>
         </article> 
     );
 }

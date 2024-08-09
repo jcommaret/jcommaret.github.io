@@ -2,6 +2,7 @@ const img = {
     myAvatar : new URL('./my-avatar.png', import.meta.url).href,
     iconDev : new URL('./icon-dev.svg', import.meta.url).href,
     iconApp : new URL('./icon-app.svg', import.meta.url).href,
+    iconQuote : new URL('./icon-quote.svg', import.meta.url).href,
     blogImage1 : new URL('./blog-1.jpg', import.meta.url).href,
     blogImage2 : new URL('./blog-2.jpg', import.meta.url).href,
     blogImage3 : new URL('./blog-3.jpg', import.meta.url).href,
@@ -17,6 +18,10 @@ const img = {
     projectImage7 : new URL('./project-7.jpg', import.meta.url).href,
     projectImage8 : new URL('./project-8.jpg', import.meta.url).href,
     projectImage9 : new URL('./project-9.jpg', import.meta.url).href,
+    avatarImage1 : new URL('./avatar-1.png', import.meta.url).href,
+    avatarImage2 : new URL('./avatar-2.png', import.meta.url).href,
+    avatarImage3 : new URL('./avatar-3.png', import.meta.url).href,
+    avatarImage4 : new URL('./avatar-4.png', import.meta.url).href,
 }
 
 export default img
