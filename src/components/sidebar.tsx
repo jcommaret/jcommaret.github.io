@@ -1,14 +1,10 @@
 // Library
 import { IonIcon } from '@ionic/react';
+// Navlink
+import { NavLink } from 'react-router-dom';
 
 // Icons
-import { chevronDown, logoGithub } from 'ionicons/icons';
-import { mailOutline } from 'ionicons/icons';
-import { calendarOutline } from 'ionicons/icons';
-import { locationOutline } from 'ionicons/icons';
-import { phonePortraitOutline } from 'ionicons/icons';
-import { logoTwitter } from 'ionicons/icons';
-import { logoMedium } from 'ionicons/icons';
+import { chevronDown, logoGithub, mailOutline, calendarOutline, locationOutline, logoTwitter, logoMedium } from 'ionicons/icons';
 
 // Images
 import img from '../assets/assets/images/images';
@@ -40,18 +36,7 @@ function Sidebar() {
             </div>
             <div className="contact-info">
               <p className="contact-title">Email</p>
-              <a href="mailto:jcommaret@gmail.com" className="contact-link">jcommaret@gmail.com</a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <IonIcon icon={phonePortraitOutline}></IonIcon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Téléphone</p>
-              <a href="tel:+33.6.43.35.78.96" className="contact-link">+33.6.43.35.78.96</a>
+              <NavLink to="mailto:jcommaret@gmail.com" className="contact-link">jcommaret@gmail.com</NavLink>
             </div>
           </li>
 

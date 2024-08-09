@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+// Navlink
+import { NavLink } from 'react-router-dom';
 
 function Navbar(){
     return(
@@ -21,7 +22,7 @@ function Navbar(){
             </li>
 
             <li className="navbar-item">
-              <NavLink to="https://calendly.com/jcommaret/" className="navbar-link" title="Contact">Contact</NavLink>
+              <NavLink to="https://calendly.com/jcommaret/" target="_blank" rel="noopener noreferrer" className="navbar-link" title="Contact">Contact</NavLink>
             </li>
           </ul>
       </nav>
