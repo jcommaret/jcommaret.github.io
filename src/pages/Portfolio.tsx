@@ -2,7 +2,7 @@
 import { IonIcon } from "@ionic/react";
 
 // Icons
-import { chevronDown, eyeOutline, logoGithub } from "ionicons/icons";
+import { chevronDown, eyeOutline } from "ionicons/icons";
 
 function Portfolio() {
   return (
