@@ -47,7 +47,7 @@ function About() {
                 <li className="testimonials-item">
                 <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
-                        <img src={img.avatarImage1} alt="Daniel lewis" width="60" data-testimonials-avatar />
+                        <img src={img.avatarImage1} alt="Daniel lewis" data-testimonials-avatar />
                     </figure>
                     <h4 className="h4 testimonials-item-title" data-testimonials-title>Rhose E.</h4>
                     <div className="testimonials-text" data-testimonials-text>
@@ -58,7 +58,7 @@ function About() {
                 <li className="testimonials-item">
                 <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
-                        <img src={img.avatarImage2} alt="Jessica miller" width="60" data-testimonials-avatar />
+                        <img src={img.avatarImage2} alt="Jessica miller" data-testimonials-avatar />
                     </figure>
                     <h4 className="h4 testimonials-item-title" data-testimonials-title>Nathalie D.</h4>
                     <div className="testimonials-text" data-testimonials-text>
@@ -69,7 +69,7 @@ function About() {
                 <li className="testimonials-item">
                 <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
-                        <img src={img.avatarImage3} alt="Emily evans" width="60" data-testimonials-avatar />
+                        <img src={img.avatarImage3} alt="Emily evans" data-testimonials-avatar />
                     </figure>
                     <h4 className="h4 testimonials-item-title" data-testimonials-title>Camille R.</h4>
                     <div className="testimonials-text" data-testimonials-text>
@@ -80,7 +80,7 @@ function About() {
                 <li className="testimonials-item">
                 <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
-                        <img src={img.avatarImage4} alt="Henry william" width="60" data-testimonials-avatar />
+                        <img src={img.avatarImage4} alt="Henry william" width="30" data-testimonials-avatar />
                     </figure>
                     <h4 className="h4 testimonials-item-title" data-testimonials-title>Julien K.</h4>
                     <div className="testimonials-text" data-testimonials-text>
