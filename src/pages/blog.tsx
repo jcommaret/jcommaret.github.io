@@ -1,5 +1,5 @@
 // Images
-import img from '../assets/assets/images/images';
+import img from '../assets/img/images';
 
 // Blog
 function Blog() {

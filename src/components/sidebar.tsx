@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { chevronDown, logoGithub, mailOutline, calendarOutline, locationOutline, logoTwitter, logoMedium } from 'ionicons/icons';
 
 // Images
-import img from '../assets/assets/images/images';
+import img from '../assets/img/images';
 
 function Sidebar() {
   return (
@@ -21,7 +21,7 @@ function Sidebar() {
           <p className="title">Développeur React.js/Native</p>
         </div>
 
-        <button className="info_more-btn" data-sidebar-btn>
+        <button className="info_more-btn" data-sidebar-btn aria-label="Contactez moi">
           <span>Contactez-moi</span>
           <IonIcon icon={chevronDown}></IonIcon>
         </button>

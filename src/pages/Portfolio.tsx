@@ -4,6 +4,9 @@ import { IonIcon } from "@ionic/react";
 // Icons
 import { chevronDown, eyeOutline } from "ionicons/icons";
 
+// Images
+import img from '../assets/img/images';
+
 function Portfolio() {
   return (
     <article className="portfolio active">
@@ -13,22 +16,21 @@ function Portfolio() {
 
       <section className="projects">
         <ul className="filter-list">
-          <li className="filter-item">
-            <button className="active" data-filter-btn>
-              All
+          <li className="select-item">
+            <button className="active" data-filter-btn aria-label="Tout les projets">
+              Tout les projets
             </button>
           </li>
-
-          <li className="filter-item">
-            <button data-filter-btn>Web design</button>
+          <li className="select-item">
+            <button data-select-item aria-label="Projets personnels">Personnal projects</button>
+          </li>
+          
+          <li className="select-item">
+            <button data-filter-btn aria-label="Applications">Applications</button>
           </li>
 
-          <li className="filter-item">
-            <button data-filter-btn>Applications</button>
-          </li>
-
-          <li className="filter-item">
-            <button data-filter-btn>Web development</button>
+          <li className="select-item">
+            <button data-filter-btn aria-label="Web dev">Web development</button>
           </li>
         </ul>
 
@@ -36,32 +38,33 @@ function Portfolio() {
           <button className="filter-select" data-select>
             <div className="select-value" data-selecct-value>
               Select category
+              
             </div>
+            
+            <ul className="select-list">
+          <li className="select-item">
+            <button className="active" data-filter-btn aria-label="Tout les projets">
+              Tout les projets
+            </button>
+          </li>
+          <li className="select-item">
+            <button data-select-item aria-label="Projets personnels">Personnal projects</button>
+          </li>
+          
+          <li className="select-item">
+            <button data-filter-btn aria-label="Applications">Applications</button>
+          </li>
 
+          <li className="select-item">
+            <button data-filter-btn aria-label="Web dev">Web development</button>
+          </li>
+        </ul>
             <div className="select-icon">
               <IonIcon icon={chevronDown} />
             </div>
-          </button>
-
-          <ul className="select-list">
-            <li className="select-item">
-              <button data-select-item>All</button>
-            </li>
-
-            <li className="select-item">
-              <button data-select-item>Web design</button>
-            </li>
-
-            <li className="select-item">
-              <button data-select-item>Applications</button>
-            </li>
-
-            <li className="select-item">
-              <button data-select-item>Web development</button>
-            </li>
-          </ul>
+          </button>  
         </div>
-
+        
         <ul className="project-list">
           <li
             className="project-item  active"
@@ -74,7 +77,7 @@ function Portfolio() {
                   <IonIcon icon={eyeOutline} />
                 </div>
                 <img
-                  src="./assets/images/project-1.jpg"
+                  src={img.projectImage1}
                   alt="finance"
                   loading="lazy"
                 />
@@ -98,7 +101,7 @@ function Portfolio() {
                 </div>
 
                 <img
-                  src="./assets/images/project-2.png"
+                  src={img.projectImage2}
                   alt="orizon"
                   loading="lazy"
                 />
@@ -122,7 +125,7 @@ function Portfolio() {
                 </div>
 
                 <img
-                  src="./assets/images/project-3.jpg"
+                  src={img.projectImage3}
                   alt="fundo"
                   loading="lazy"
                 />
@@ -146,7 +149,7 @@ function Portfolio() {
                 </div>
 
                 <img
-                  src="./assets/images/project-4.png"
+                  src={img.projectImage4}
                   alt="brawlhalla"
                   loading="lazy"
                 />
@@ -170,7 +173,7 @@ function Portfolio() {
                 </div>
 
                 <img
-                  src="./assets/images/project-5.png"
+                  src={img.projectImage5}
                   alt="dsm."
                   loading="lazy"
                 />
@@ -194,7 +197,7 @@ function Portfolio() {
                 </div>
 
                 <img
-                  src="./assets/images/project-6.png"
+                  src={img.projectImage6}
                   alt="metaspark"
                   loading="lazy"
                 />
@@ -218,7 +221,7 @@ function Portfolio() {
                 </div>
 
                 <img
-                  src="./assets/images/project-7.png"
+                  src={img.projectImage7}
                   alt="summary"
                   loading="lazy"
                 />
@@ -242,7 +245,7 @@ function Portfolio() {
                 </div>
 
                 <img
-                  src="./assets/images/project-8.jpg"
+                  src={img.projectImage8}
                   alt="task manager"
                   loading="lazy"
                 />
@@ -266,7 +269,7 @@ function Portfolio() {
                 </div>
 
                 <img
-                  src="./assets/images/project-9.png"
+                  src={img.projectImage9}
                   alt="arrival"
                   loading="lazy"
                 />

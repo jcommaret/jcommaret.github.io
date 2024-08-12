@@ -1,6 +1,6 @@
 import { IonIcon } from '@ionic/react';
 // Images
-import img from '../assets/assets/images/images';
+import img from '../assets/img/images';
 // Icons
 import { closeOutline } from 'ionicons/icons';
 
@@ -93,7 +93,7 @@ function About() {
         <div className="modal-container" data-modal-container>
             <div className="overlay" data-overlay></div>
             <section className="testimonials-modal">
-                <button className="modal-close-btn" data-modal-close-btn>
+                <button className="modal-close-btn" data-modal-close-btn aria-label="Fermer la fenêtre">
                     <IonIcon icon={closeOutline}></IonIcon>
                 </button>
                 <div className="modal-img-wrapper">
