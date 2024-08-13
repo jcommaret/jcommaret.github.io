@@ -18,7 +18,7 @@ function Sidebar() {
         </figure>
         <div className="info-content">
           <h1 className="name" title="Richard hanrick">Jérôme Commaret</h1>
-          <p className="title">Développeur React.js/Native</p>
+          <p className="title">Développeur React</p>
         </div>
 
         <button className="info_more-btn" data-sidebar-btn aria-label="Contactez moi">
