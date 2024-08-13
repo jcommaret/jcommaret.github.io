@@ -14,12 +14,10 @@ function Navbar(){
             </li>
 
             <li className="navbar-item">
-              <NavLink to="/portfolio" className="navbar-link" title="Portfolio">Portfolio</NavLink>
+              <NavLink to="/side-projects" className="navbar-link" title="Side Projects">Side Projects</NavLink>
             </li>
 
-            <li className="navbar-item">
-              <NavLink to="/blog" className="navbar-link" title="Blog">Blog</NavLink>
-            </li>
+           
 
             <li className="navbar-item">
               <NavLink to="https://calendly.com/jcommaret/" target="_blank" rel="noopener noreferrer" className="navbar-link" title="Contact">Contact</NavLink>
