@@ -14,8 +14,6 @@ import Contact from "./pages/Contact"
 import Blog from "./pages/Blog"
 import ErrorPage from "./pages/ErrorPage"
 
-import Head from "./components/head"
-
 // Create a browser router
 const router = createBrowserRouter([
   {

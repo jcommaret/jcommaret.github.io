@@ -4,7 +4,7 @@ import img from '../assets/img/images';
 
 const socialPreview = img.socialPreview;
 const urlsite = "https://jcommaret.github.io";
-const title = "Jérôme Commaret - Code, manage, innove";
+const title = "Jérôme Commaret - Code, Manage, Innove";
 const description = "Jérôme Commaret, développeur React et manager technique passionné par l'innovation.";
 
 function Head() {
