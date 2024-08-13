@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://jcommaret.github.io/", 
+  "homepage": "https://jcommaret.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,15 +8,16 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview", 
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@ionic/react": "^8.2.6",
     "ionicons": "^7.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^6.26.0"
   },
   "devDependencies": {

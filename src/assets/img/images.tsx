@@ -1,4 +1,5 @@
 const img = {
+    socialPreview : new URL('./studio-image.jpg', import.meta.url).href,
     myAvatar : new URL('./my-avatar.png', import.meta.url).href,
     iconDev : new URL('./icon-dev.svg', import.meta.url).href,
     iconApp : new URL('./icon-app.svg', import.meta.url).href,
