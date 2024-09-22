@@ -1,15 +1,9 @@
 import { Helmet } from 'react-helmet';
 
-import img from '../assets/img/images';
-
-const urlsite = "https://jcommaret.github.io";
-const title = "Jérôme Commaret - Code, Manage, Innove";
-const description = "Jérôme Commaret, développeur React et manager technique passionné par l'innovation.";
-
 function Head() {
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>Jérôme Commaret</title>
       <meta name="description" content="Jérôme Code, Manage, Innove"/>
 
       <meta property="og:url" content="https://jcommaret.github.io/"/>

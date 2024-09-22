@@ -12,9 +12,9 @@ function About() {
         </header>
 
         <section className="about-text">
-            <p>Je suis un développeur React.js/React Native basé à Paris, je travaille sur des sites web et des applications mobiles.</p>
+            <p>Je suis un développeur web et mobile basé à Paris.</p>
             <p>Avec un regard porté sur les perfonmances, je code, je manage, et j'innove.</p>
-            <p>Polyvalent, j'ai déjà travaillé pour des grands groupes internationnaux mais également pour des startups.J'ai une très bonne maitrise de la chaine de production grâce à des expériences en gestion de projet technique et fonctionnelle.</p>
+            <p>Polyvalent, j'ai déjà travaillé pour des grands groupes internationnaux mais également pour des startups. J'ai une très bonne maitrise de la chaine de production grâce à des expériences en gestion de projet technique et fonctionnelle.</p>
         </section>
         
         <section className="service">

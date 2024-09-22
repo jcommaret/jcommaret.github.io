@@ -17,8 +17,8 @@ function Sidebar() {
           <img src={img.myAvatar} alt="Jérôme Commaret" width="80" />
         </figure>
         <div className="info-content">
-          <h1 className="name" title="Richard hanrick">Jérôme Commaret</h1>
-          <p className="title">Développeur React</p>
+          <h1 className="name" title="Jérôme Commaret">Jérôme Commaret</h1>
+          <p className="title">Développeur web et mobile</p>
         </div>
 
         <button className="info_more-btn" data-sidebar-btn aria-label="Contactez moi">
