@@ -17,6 +17,20 @@ function Portfolio() {
 
       <section className="projects">
         <ul className="project-list">
+          
+          <li className="project-item active" data-filter-item data-category="web development">
+            <a href="#">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <IonIcon icon={eyeOutline} />
+                </div>
+                <img src={img.projectImage1} alt="téhou" loading="eager" />
+              </figure>
+              <h3 className="project-title">Ce portfolio</h3>
+              <p className="project-category">Gh-pages - Vite.js - React.js - Typescript</p>
+            </a>
+          </li>
+
           <li className="project-item active" data-filter-item data-category="web development">
             <a href="#">
               <figure className="project-img">
@@ -119,7 +133,32 @@ function Portfolio() {
               <h3 className="project-title">Portfolio</h3>
               <p className="project-category">Thème Wordpress</p>
             </a>
-          </li>          
+          </li> 
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="web design"
+          >
+            <a href="#">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <IonIcon icon={eyeOutline} />
+                </div>
+                <img src={img.projectImage1} alt="metaspark"
+                  loading="eager"
+                />
+              </figure>
+              <h3 className="project-title">Void</h3>
+              <p className="project-category">Editeur de code propulsé par AI</p>
+            </a>
+          </li> 
+
+
+
+
+
+
         </ul>
       </section>
     </article>
