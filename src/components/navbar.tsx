@@ -17,9 +17,7 @@ function Navbar(){
               <NavLink to="/side-projects" className="navbar-link" title="Side Projects">Side Projects</NavLink>
             </li> */}
 
-            <li className="navbar-item">
-              <NavLink to="https://calendly.com/jcommaret/" target="_blank" rel="noopener noreferrer" className="navbar-link" title="Contact">Contact</NavLink>
-            </li>
+            
           </ul>
       </nav>
     )

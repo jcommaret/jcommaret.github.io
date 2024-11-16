@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from '../components/sidebar';
 import Navbar from '../components/navbar';
 import Head from '../components/head';
-import '../App.css';
+import '../App.scss';
 
 function Root() {
   return (
