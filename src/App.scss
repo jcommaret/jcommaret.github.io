@@ -189,7 +189,6 @@ article {
   ion-icon { --ionicon-stroke-width: 35px; }
 }
 
-
 article{ 
   display: none;
   &.active {
@@ -225,17 +224,16 @@ article{
 .article-title {
   position: relative;
   padding-bottom: 7px;
-}
-
-.article-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: var(--text-gradient-yellow);
-  border-radius: 3px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--text-gradient-yellow);
+    border-radius: 3px;
+  }
 }
 
 .has-scrollbar::-webkit-scrollbar {
