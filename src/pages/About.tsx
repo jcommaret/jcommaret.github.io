@@ -3,40 +3,32 @@ import { IonIcon } from '@ionic/react';
 // Images
 import img from '../assets/img/images';
 // Icons
-import { closeOutline, addOutline } from 'ionicons/icons';
+import { addOutline } from 'ionicons/icons';
 
-interface Testimonial {
-  image: string;
-  name: string;
-  text: string;
-}
+import Modal from '../components/modal';
 
 function About() {
-    const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial>({
+    const [selectedTestimonial, setSelectedTestimonial] = useState({
         image: '',
-        name: '',
-        text: ''
+        title: '',
+        content: {
+            text: ''
+        }
     });
     
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
     const openModal = (image: string, name: string, text: string) => {
-        setSelectedTestimonial({ image, name, text });
-        const modalContainer = document.querySelector('.modal-container');
-        const overlay = document.querySelector('.overlay');
-        
-        if (modalContainer && overlay) {
-            modalContainer.classList.add('active');
-            overlay.classList.add('active');
-        }
+        setSelectedTestimonial({
+            image,
+            title: name,
+            content: { text }
+        });
+        setIsModalOpen(true);
     };
     
     const closeModal = () => {
-        const modalContainer = document.querySelector('.modal-container');
-        const overlay = document.querySelector('.overlay');
-        
-        if (modalContainer && overlay) {
-            modalContainer.classList.remove('active');
-            overlay.classList.remove('active');
-        }
+        setIsModalOpen(false);
     };
 
     return(
@@ -137,26 +129,14 @@ function About() {
                 </ul>
             </section>
             
-            <div className="modal-container" data-modal-container>
-                <div className="overlay" data-overlay onClick={closeModal}></div>
-                <section className="testimonials-modal">
-                    <button className="modal-close-btn" data-modal-close-btn aria-label="Fermer la fenêtre" onClick={closeModal}>
-                        <IonIcon icon={closeOutline}></IonIcon>
-                    </button>
-                    <div className="modal-img-wrapper">
-                    <figure className="modal-avatar-box">
-                        <img src={selectedTestimonial.image} alt={selectedTestimonial.name} width="80" data-modal-img />
-                    </figure>
-                        <img src={img.iconQuote} alt="quote icon" />
-                    </div>
-                    <div className="modal-content">
-                        <h4 className="h3 modal-title" data-modal-title>{selectedTestimonial.name}</h4>
-                        <div data-modal-text>
-                            <p>{selectedTestimonial.text}</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            <Modal 
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                image={selectedTestimonial.image}
+                title={selectedTestimonial.title}
+                content={selectedTestimonial.content}
+                type="testimonial"
+            />
         </article> 
     );
 }

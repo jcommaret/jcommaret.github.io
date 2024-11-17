@@ -1,5 +1,6 @@
 // Library
 import { IonIcon } from "@ionic/react";
+import { useState } from 'react';
 
 // Icons
 import { eyeOutline } from "ionicons/icons";
@@ -7,8 +8,32 @@ import { eyeOutline } from "ionicons/icons";
 // Images
 import img from '../assets/img/images';
 
+// Components
+import Modal from '../components/modal';
+
 
 function Portfolio() {
+  const [selectedProject, setSelectedProject] = useState({
+    image: '',
+    title: '',
+    content: {
+      text: '',
+      technologies: '',
+      link: ''
+    }
+  });
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const openModal = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+  
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <article className="portfolio active">
       <header>
@@ -19,7 +44,15 @@ function Portfolio() {
         <ul className="project-list">
           
           <li className="project-item active" data-filter-item data-category="web development">
-            <a href="#">
+            <div onClick={() => openModal({
+              image: img.projectImage1,
+              title: 'Ce portfolio',
+              content: {
+                text: 'Portfolio personnel développé avec React et TypeScript',
+                technologies: 'Gh-pages - Vite.js - React.js - Typescript',
+                link: 'https://github.com/votre-repo'
+              }
+            })}>
               <figure className="project-img">
                 <div className="project-item-icon-box">
                   <IonIcon icon={eyeOutline} />
@@ -28,7 +61,7 @@ function Portfolio() {
               </figure>
               <h3 className="project-title">Ce portfolio</h3>
               <p className="project-category">Gh-pages - Vite.js - React.js - Typescript</p>
-            </a>
+            </div>
           </li>
 
           <li className="project-item active" data-filter-item data-category="web development">
@@ -161,6 +194,15 @@ function Portfolio() {
 
         </ul>
       </section>
+
+      <Modal 
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        image={selectedProject.image}
+        title={selectedProject.title}
+        content={selectedProject.content}
+        type="project"
+      />
     </article>
   );
 }
