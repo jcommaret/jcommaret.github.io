@@ -8,9 +8,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // options sass si nécessaire
-        // Par exemple :
-        // additionalData: `@import "./src/styles/variables.scss";`
+        // Utilisez la nouvelle API
+        implementation: 'sass',
+        sassOptions: {
+          outputStyle: 'compressed',
+        }
       }
     }
   }

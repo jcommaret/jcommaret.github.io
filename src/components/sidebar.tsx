@@ -4,7 +4,7 @@ import { IonIcon } from '@ionic/react';
 import { NavLink } from 'react-router-dom';
 
 // Icons
-import { chevronDown, logoGithub, mailOutline, calendarOutline, locationOutline, logoTwitter, logoMedium } from 'ionicons/icons';
+import { chevronDown, logoGithub, mailOutline, locationOutline, logoTwitter, logoMedium } from 'ionicons/icons';
 
 // Images
 import img from '../assets/img/images';
@@ -18,12 +18,15 @@ function Sidebar() {
         </figure>
         <div className="info-content">
           <h1 className="name" title="Jérôme Commaret">Jérôme Commaret</h1>
-          <p className="title">Développeur web et mobile</p>
+          <p className="title">Code, manage, innove</p>
         </div>
 
         <button className="info_more-btn" data-sidebar-btn aria-label="Contactez moi">
-          <span>Contactez-moi</span>
-          <IonIcon icon={chevronDown}></IonIcon>
+          <span>
+            <a href="mailto:jcommaret@gmail.com?subject=Contact%20depuis%20jcommaret.github.io&body=Bonjour%20J%C3%A9r%C3%B4me%2C%0A%0AJe%20souhaite%20travailler%20avec%20vous.%0A%0AMes%20coordonn%C3%A9es%20%3A%0A%0ANom%20%3A%20%0APr%C3%A9nom%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0AEmail%20%3A%20%0A%0ACordialement">
+              Contactez-moi
+            </a>
+          </span>
         </button>
       </div>
 
@@ -37,17 +40,6 @@ function Sidebar() {
             <div className="contact-info">
               <p className="contact-title">Email</p>
               <NavLink to="mailto:jcommaret@gmail.com" className="contact-link">jcommaret@gmail.com</NavLink>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <IonIcon icon={calendarOutline}></IonIcon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Date de naissance</p>
-              <time dateTime="1982-04-18">18 Avril 1982</time>
             </div>
           </li>
 
