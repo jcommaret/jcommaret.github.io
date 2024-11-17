@@ -1,9 +1,7 @@
 // React entry point for the application
 import * as React from "react"
 import * as ReactDOM from "react-dom/client"
-
-// Import the createBrowserRouter function
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 
 // Import the pages
 import Root from "./pages/root"
@@ -14,44 +12,20 @@ import Contact from "./pages/Contact"
 import Blog from "./pages/Blog"
 import ErrorPage from "./pages/ErrorPage"
 
-// Create a browser router
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <About />
-      },
-      {
-        path: "/about",
-        element: <About />
-      },
-      {
-        path: "/resume",
-        element: <Resume />
-      },
-      {
-        path: "/side-projects",
-        element: <Portfolio />
-      },
-      {
-        path: "/contact",
-        element: <Contact />
-      },
-      {
-        path: "/blog",
-        element: <Blog />
-      } 
-    ],
-  },
-]);
-
 // Render the application
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-      <RouterProvider router={router}></RouterProvider>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
+          <Route index element={<About />} />
+          <Route path="about" element={<About />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="side-projects" element={<Portfolio />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="blog" element={<Blog />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
