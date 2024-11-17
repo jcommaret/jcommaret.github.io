@@ -4,7 +4,7 @@ import { IonIcon } from '@ionic/react';
 import { NavLink } from 'react-router-dom';
 
 // Icons
-import { chevronDown, logoGithub, mailOutline, locationOutline, logoTwitter, logoMedium } from 'ionicons/icons';
+import { logoGithub, mailOutline, locationOutline, logoTwitter, logoMedium } from 'ionicons/icons';
 
 // Images
 import img from '../assets/img/images';
