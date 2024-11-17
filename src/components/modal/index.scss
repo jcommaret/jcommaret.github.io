@@ -1,0 +1,127 @@
+@mixin fixed-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal{
+    &-img-wrapper > img { display: none; }
+    &-avatar-box{
+        background: var(--bg-gradient-onyx);
+        width: max-content;
+        border-radius: 14px;
+        margin-bottom: 15px;
+        box-shadow: var(--shadow-2);
+    }
+    &-container{
+        @include fixed-fullscreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 20;
+        &:not(.active) {
+            pointer-events: none;
+            visibility: hidden;
+        }
+        &.active{
+            .modal-content-wrapper{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+    &-overlay {
+        @include fixed-fullscreen;
+        background: hsla(0, 0%, 5%, 0.8);
+        z-index: 1;
+        transition: var(--transition-1);
+        &:not(.active) {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    }
+    &-title{
+        margin-bottom: 4px;
+    }
+    &-content{
+        padding: 15px;
+        p{
+            color: var(--light-gray);
+            font-size: var(--fs-6);
+            font-weight: var(--fw-300);
+            line-height: 1.6;
+        }
+        &-wrapper{
+            background: var(--eerie-black-2);
+            position: relative;
+            margin: auto;
+            width: 100%;
+            border: 1px solid var(--jet);
+            border-radius: 14px;
+            box-shadow: var(--shadow-5);
+            transform: scale(1.2);
+            opacity: 0;
+            transition: var(--transition-1);
+            z-index: 2;
+            $variants: (
+                'testimonial': (
+                    max-width: 800px,
+                    padding: 30px,
+                    display: flex,
+                    gap: 25px
+                ),
+                'project': (
+                    max-width: 800px
+                )
+            );
+            @each $variant, $styles in $variants {
+                &.#{$variant} {
+                    @each $property, $value in $styles {
+                        #{$property}: $value;
+                    }
+                }
+            }
+            .technologies {
+                margin-top: 1rem;
+                color: var(--light-gray);
+            }
+            &-link{
+                display: inline-block;
+                margin-top: 1rem;
+                padding: 0.5rem 1rem;
+                background: var(--orange-yellow-crayola);
+                color: var(--eerie-black-1);
+                border-radius: 4px;
+                text-decoration: none;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+    &-close-btn{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--onyx);
+        border-radius: 8px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white-2);
+        font-size: 18px;
+        opacity: 0.7;
+        &:hover, &:focus {
+            opacity: 1;
+        }
+        ion-icon{
+            --ionicon-stroke-width: 50px;;
+        }
+    }
+}
