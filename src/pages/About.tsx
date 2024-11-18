@@ -39,7 +39,7 @@ function About() {
 
             <section className="about-text">
                 <p>Je suis un développeur web et mobile basé à Paris.</p>
-                <p>Avec un regard porté sur les perfonmances, je code, je manage, et j'innove.</p>
+                <p>Avec un regard porté sur les performances, je code, je manage, et j'innove.</p>
                 <p>Polyvalent, j'ai déjà travaillé pour des grands groupes internationnaux mais également pour des startups. J'ai une très bonne maitrise de la chaine de production grâce à des expériences en gestion de projet technique et fonctionnelle.</p>
             </section>
         
