@@ -1,0 +1,37 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "image": "projectImage1",
+        "title": "Ce portfolio",
+        "category": "Site web statique",
+        "content": {
+          "text": "Portfolio personnel développé avec React et TypeScript",
+          "technologies": "Gh-pages - Vite.js - React.js - Typescript",
+          "link": "https://github.com/votre-repo"
+        }
+      },
+      {
+        "id": 2,
+        "image": "projectImage2",
+        "title": "Void",
+        "category": "Application MacOS, Linux, Windows",
+        "content": {
+          "text": "IDE utilisant l'IA",
+          "technologies": "Electron, React, TailwindCSS",
+          "link": "https://github.com/voideditor/void"
+        }
+      },
+      {
+        "id": 3,
+        "image": "projectImage3",
+        "title": "GDEF",
+        "category": "Application mobile",
+        "content": {
+          "text": "Le grand dictionnaire Estonien Français",
+          "technologies": "Vite, Capacitor",
+          "link": "https://github.com/votre-repo"
+        }
+      }
+    ]
+  }
