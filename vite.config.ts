@@ -8,14 +8,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // Utilisez la nouvelle API
-        implementation: 'sass',
-        sassOptions: {
-          outputStyle: 'compressed',
-        }
+        api : 'modern-compiler' // Utilisez la nouvelle API
       }
     }
   }
 })
-
-
