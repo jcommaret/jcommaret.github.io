@@ -8,7 +8,7 @@
         "content": {
           "text": "Portfolio personnel développé avec React et TypeScript",
           "technologies": "Gh-pages - Vite.js - React.js - Typescript",
-          "link": "https://github.com/votre-repo"
+          "link": "https://github.com/jcommaret/jcommaret.github.io"
         }
       },
       {
@@ -18,7 +18,7 @@
         "category": "Application MacOS, Linux, Windows",
         "content": {
           "text": "IDE utilisant l'IA",
-          "technologies": "Electron, React, TailwindCSS",
+          "technologies": "Electron, TypeScript, React, TailwindCSS",
           "link": "https://github.com/voideditor/void"
         }
       },
