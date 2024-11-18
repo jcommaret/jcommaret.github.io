@@ -7,7 +7,6 @@
 }
 
 .modal{
-    &-img-wrapper > img { display: none; }
     &-avatar-box{
         background: var(--bg-gradient-onyx);
         width: max-content;
@@ -15,6 +14,7 @@
         margin-bottom: 15px;
         box-shadow: var(--shadow-2);
     }
+    &-img-wrapper > img { display: none; }
     &-container{
         @include fixed-fullscreen;
         display: flex;
@@ -75,7 +75,7 @@
                     gap: 25px
                 ),
                 'project': (
-                    max-width: 800px
+                    max-width: 600px
                 )
             );
             @each $variant, $styles in $variants {
@@ -85,21 +85,26 @@
                     }
                 }
             }
+            &.project{
+                width: 100%;
+                overflow-y: auto;
+                .modal-img-wrapper {
+                    img {
+                        width: 100%;
+                        height: auto;
+                        max-height: 50vh;
+                        object-fit: cover;
+                    }
+                }
+                .modal-avatar-box {
+                    border-radius: 0;
+                    box-shadow: none;
+                    margin-bottom: 0px;
+                }
+            }
             .technologies {
                 margin-top: 1rem;
                 color: var(--light-gray);
-            }
-            &-link{
-                display: inline-block;
-                margin-top: 1rem;
-                padding: 0.5rem 1rem;
-                background: var(--orange-yellow-crayola);
-                color: var(--eerie-black-1);
-                border-radius: 4px;
-                text-decoration: none;
-                &:hover {
-                    opacity: 0.9;
-                }
             }
         }
     }
@@ -123,5 +128,45 @@
         ion-icon{
             --ionicon-stroke-width: 50px;;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        &-content-wrapper {
+            &.project {
+                max-width: 95vw;
+                
+                .modal-img-wrapper {
+                    img {
+                        max-height: 40vh;
+                    }
+                }
+            }
+        }
+    }
+}
+.project-link{
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.4rem;
+    background: hsl(45, 100%, 72%);
+    color: var(--eerie-black-1);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: var(--fw-500);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+    &:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        background: hsl(45, 100%, 72%);
+    }
+    
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 }
