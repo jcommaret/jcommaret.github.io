@@ -4,8 +4,6 @@ import { logoGithub, mailOutline, locationOutline, logoTwitter, logoMedium } fro
 import img from '../../assets/img/images';
 import './index.scss';
 
-
-
 function Sidebar() {
   return (
     <aside className="sidebar" data-sidebar>

@@ -1,4 +1,3 @@
-// Navlink
 import { NavLink } from 'react-router-dom';
 
 function Navbar(){
@@ -13,11 +12,10 @@ function Navbar(){
               <NavLink to="/resume" className="navbar-link" title="CV">CV</NavLink>
             </li>
 
-            {/* <li className="navbar-item">
-              <NavLink to="/side-projects" className="navbar-link" title="Side Projects">Side Projects</NavLink>
-            </li> */}
-
-            
+            <li className="navbar-item">
+              <NavLink to="/side-projects" className="navbar-link" title="Side Projects">Mes projets</NavLink>
+            </li>
+                
           </ul>
       </nav>
     )

@@ -1,6 +1,6 @@
 import { IonIcon } from '@ionic/react';
 import { closeOutline } from 'ionicons/icons';
-import img from '../../assets/img/images';
+
 import './index.scss';
 
 interface ModalProps {
@@ -26,9 +26,8 @@ function Modal({ isOpen, onClose, image, title, content, type }: ModalProps) {
         </button>
         <div className="modal-img-wrapper">
           <figure className="modal-avatar-box">
-            <img src={image} alt={title} width="80" data-modal-img />
+            <img src={image} alt={title} data-modal-img />
           </figure>
-          {type === 'testimonial' && <img src={img.iconQuote} alt="quote icon" />}
         </div>
         <div className="modal-content">
           <h4 className="h3 modal-title">{title}</h4>
