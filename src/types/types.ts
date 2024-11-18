@@ -1,3 +1,20 @@
+
+export interface NavItem {
+  name: string;
+  path: string;
+}
+
+export interface Contact {
+  icon: string;
+  title: string;
+  link: string;
+}
+
+export interface Social {
+  icon: string;
+  link: string;
+}
+
 export interface Project {
   id: number;
   image: string;
@@ -7,6 +24,14 @@ export interface Project {
     text: string;
     technologies: string;
     link: string;
+  };
+}
+
+export interface Testimonial {
+  image: string;
+  title: string;
+  content: {
+    text: string;
   };
 }
 
@@ -21,17 +46,6 @@ export interface ModalProps {
     link?: string;
   };
   type: 'testimonial' | 'project';
-}
-
-export interface Contact {
-  icon: string;
-  title: string;
-  link: string;
-}
-
-export interface Social {
-  icon: string;
-  link: string;
 }
 
 export interface ImageAssets {
@@ -54,15 +68,3 @@ export interface ImageAssets {
   avatarImage4: string;
 }
 
-export interface Testimonial {
-  image: string;
-  title: string;
-  content: {
-    text: string;
-  };
-}
-
-export interface NavItem {
-  name: string;
-  path: string;
-}

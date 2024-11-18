@@ -2,11 +2,12 @@
 import { IonIcon } from "@ionic/react";
 import { useState } from 'react';
 import { eyeOutline } from "ionicons/icons";
-import img from '../assets/img/images';
 
 import Modal from '../components/modal';
-import projectsData from '../data/projects.json';
 import { Project } from '../types/types';
+
+import img from '../assets/img/images';
+import projectsData from '../data/projects.json';
 
 function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project>({
@@ -35,7 +36,7 @@ function Portfolio() {
   return (
     <article className="portfolio active">
       <header>
-        <h2 className="h2 article-title">Mes sides projects</h2>
+        <h2 className="h2 article-title">Mes projets</h2>
       </header>
 
       <section className="projects">
