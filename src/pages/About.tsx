@@ -6,9 +6,10 @@ import img from '../assets/img/images';
 import { addOutline } from 'ionicons/icons';
 
 import Modal from '../components/modal';
+import { Testimonial } from '../types/types';
 
 function About() {
-    const [selectedTestimonial, setSelectedTestimonial] = useState({
+    const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial>({
         image: '',
         title: '',
         content: {

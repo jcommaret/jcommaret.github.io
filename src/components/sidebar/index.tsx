@@ -3,10 +3,23 @@ import { NavLink } from 'react-router-dom';
 import { logoGithub, mailOutline, locationOutline, logoTwitter, logoMedium } from 'ionicons/icons';
 import img from '../../assets/img/images';
 import './index.scss';
+import { Contact, Social } from '../../types/types';
 
 function Sidebar() {
+  
+  const contacts: Contact[] = [
+    { icon: mailOutline, title: 'Email', link: 'mailto:jcommaret@gmail.com' },
+    { icon: locationOutline, title: 'Localisation', link: 'https://www.google.com/maps/search/?api=1&query=Paris' },
+  ];
+
+  const socials: Social[] = [
+    { icon: logoTwitter, link: 'https://twitter.com/jcommaret' },
+    { icon: logoMedium, link: 'https://medium.com/@jcommaret' },
+    { icon: logoGithub, link: 'https://github.com/jcommaret' },
+  ];
+
   return (
-    <aside className="sidebar" data-sidebar>
+    <aside className="sidebar">
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img src={img.myAvatar} alt="Jérôme Commaret" width="80" />
@@ -28,47 +41,32 @@ function Sidebar() {
       <div className="sidebar-info_more">
         <div className="separator"></div>
         <ul className="contacts-list">
-          <li className="contact-item">
-            <div className="icon-box">
-              <IonIcon icon={mailOutline}></IonIcon>
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">Email</p>
-              <NavLink to="mailto:jcommaret@gmail.com" className="contact-link">jcommaret@gmail.com</NavLink>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <IonIcon icon={locationOutline}></IonIcon>  
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Localisation</p>
-              <address>Paris, FR</address>
-            </div>
-
-          </li>
+          {contacts.map((contact, index) => (
+            <li key={index} className="contact-item">
+              <div className="icon-box">
+                <IonIcon icon={contact.icon}></IonIcon>
+              </div>
+              <div className="contact-info">
+                <p className="contact-title">{contact.title}</p>
+                {contact.title === 'Email' ? (
+                  <NavLink to={contact.link} className="contact-link">jcommaret@gmail.com</NavLink>
+                ) : (
+                  <address>Paris, FR</address>
+                )}
+              </div>
+            </li>
+          ))}
         </ul>
 
         <div className="separator"></div>
         <ul className="social-list">
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <IonIcon icon={logoTwitter}></IonIcon>
-            </a>
-          </li>
-
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <IonIcon icon={logoMedium}></IonIcon>
-            </a>
-          </li>
-          <li className="social-item">
-            <a href="#" className="social-link">
-              <IonIcon icon={logoGithub}></IonIcon>
-            </a>
-          </li>
+          {socials.map((social, index) => (
+            <li key={index} className="social-item">
+              <a href={social.link} className="social-link">
+                <IonIcon icon={social.icon}></IonIcon>
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </aside>
