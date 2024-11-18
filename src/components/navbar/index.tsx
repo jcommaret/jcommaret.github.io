@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom';
-
-import './index.scss';
-
 import { NavItem } from '../../types/types';
+import './index.scss';
 
 function Navbar(){
     const pages: NavItem[] = [
@@ -10,7 +8,6 @@ function Navbar(){
         { name: 'Projets', path: 'projets' },
         { name: 'CV', path: 'resume' },
     ];
-
     return(
       <nav className="navbar">
           <ul className="navbar-list">

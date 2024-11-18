@@ -1,4 +1,3 @@
-// Interfaces pour les projets
 export interface Project {
   id: number;
   image: string;
@@ -11,7 +10,6 @@ export interface Project {
   };
 }
 
-// Interfaces pour les composants Modal
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -25,9 +23,6 @@ export interface ModalProps {
   type: 'testimonial' | 'project';
 }
 
-export type ImageKeys = keyof ImageAssets;
-
-// Interfaces pour la Sidebar
 export interface Contact {
   icon: string;
   title: string;
@@ -39,7 +34,6 @@ export interface Social {
   link: string;
 }
 
-// Interface pour les images
 export interface ImageAssets {
   socialPreview: string;
   myAvatar: string;
@@ -60,7 +54,6 @@ export interface ImageAssets {
   avatarImage4: string;
 }
 
-// Interface pour les témoignages
 export interface Testimonial {
   image: string;
   title: string;
@@ -69,7 +62,6 @@ export interface Testimonial {
   };
 }
 
-// Interface pour la navigation
 export interface NavItem {
   name: string;
   path: string;

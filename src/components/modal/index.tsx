@@ -1,8 +1,7 @@
 import { IonIcon } from '@ionic/react';
 import { closeOutline } from 'ionicons/icons';
-
-import './index.scss';
 import { ModalProps } from '../../types/types';
+import './index.scss';
 
 function Modal({ isOpen, onClose, image, title, content, type }: ModalProps) {
   return (
