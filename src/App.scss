@@ -43,16 +43,7 @@
   );
   --ff-poppins: 'Poppins', sans-serif;
   --fs-base: 16px;
-  --fs-ratios: (
-    1: 1.5,    // 24px
-    2: 1.125,  // 18px
-    3: 1.0625, // 17px
-    4: 1,      // 16px
-    5: 0.9375, // 15px
-    6: 0.875,  // 14px
-    7: 0.8125, // 13px
-    8: 0.6875  // 11px
-  );
+  
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
@@ -61,8 +52,6 @@
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 }
-
-
 
 @mixin flex($justify: center, $align: center, $gap: 0) {
   display: flex;
@@ -81,8 +70,6 @@
   }
 }
 
-
-
 %card-base {
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
@@ -94,8 +81,7 @@
 %gradient-bg {
   position: relative;
   background: var(--border-gradient-onyx);
-  z-index: 1;
-  
+  z-index: 1;  
   &::before {
     content: "";
     position: absolute;
@@ -1230,30 +1216,20 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 @media (min-width: 768px) {
-
-
   .sidebar, article { width: 700px; }
-
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
-
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
   }
-
   .navbar-link { --fs-8: 15px; }
-
   .testimonials-modal {
     gap: 35px;
     max-width: 680px;
   }
-
   .modal-avatar-box img { width: 80px; }
-
   .article-title { padding-bottom: 20px; }
-
   .filter-select-box { display: none; }
-
   .filter-list {
     display: flex;
     justify-content: flex-start;
@@ -1262,26 +1238,19 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding-left: 5px;
     margin-bottom: 30px;
   }
-
   .filter-item button {
     color: var(--light-gray);
     font-size: var(--fs-5);
     transition: var(--transition-1);
   }
-
   .filter-item button:hover { color: var(--light-gray-70); }
-
   .filter-item button.active { color: var(--orange-yellow-crayola); }
-
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
-
   .input-wrapper { grid-template-columns: 1fr 1fr; }
-
   .form-btn {
     width: max-content;
     margin-left: auto;
   }
-  
 }
 
 @media (min-width: 1024px) {
@@ -1290,7 +1259,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
   }
-
+  
   .sidebar, article {
     width: 950px;
     box-shadow: var(--shadow-5);
