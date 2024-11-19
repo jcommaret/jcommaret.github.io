@@ -8,7 +8,6 @@ import Root from "./pages/root"
 import About from "./pages/About"
 import Resume from "./pages/Resume"
 import Portfolio from "./pages/Portfolio"
-import Contact from "./pages/Contact"
 import Blog from "./pages/Blog"
 import ErrorPage from "./pages/ErrorPage"
 
@@ -22,7 +21,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="about" element={<About />} />
           <Route path="resume" element={<Resume />} />
           <Route path="projets" element={<Portfolio />} />
-          <Route path="contact" element={<Contact />} />
           <Route path="blog" element={<Blog />} />
         </Route>
       </Routes>
