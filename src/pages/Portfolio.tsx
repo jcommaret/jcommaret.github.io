@@ -1,18 +1,17 @@
-// Library
-import { IonIcon } from "@ionic/react";
-import { useState } from 'react';
-import { eyeOutline } from "ionicons/icons";
+import { useModal } from '../hooks/useModal';
 
-import Modal from '../components/modal';
 import { Project } from '../types/types';
-
+import Modal from '../components/modal';
 import img from '../assets/img/images';
-
 import projectsData from '../data/projects.json';
 
 function Portfolio() {
-  const [selectedProject, setSelectedProject] = useState<Project>({
-    id: 0,
+  const { 
+    isModalOpen, 
+    selectedItem: selectedProject, 
+    openModal, 
+    closeModal 
+  } = useModal<Project>({
     image: '',
     title: '',
     category: '',
@@ -23,17 +22,6 @@ function Portfolio() {
     }
   });
   
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  const openModal = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-  
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <article className="portfolio active">
       <header>
@@ -42,18 +30,14 @@ function Portfolio() {
 
       <section className="projects">
         <ul className="project-list">
-          {projectsData.projects.map((project) => (
-            <li key={project.id} className="project-item active" onClick={() => openModal({
-              id: project.id,
+          {projectsData.projects.map((project, index) => (
+            <li key={index} className="project-item active" onClick={() => openModal({
               image: img[project.image as keyof typeof img],
               title: project.title,
               category: project.category,
               content: project.content
             })}>
               <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <IonIcon icon={eyeOutline} />
-                </div>
                 <img src={img[project.image as keyof typeof img]} alt={project.title} loading="eager" />
               </figure>
               <h3 className="project-title">{project.title}</h3>

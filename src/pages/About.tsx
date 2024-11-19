@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useModal } from '../hooks/useModal';
+
 import { IonIcon } from '@ionic/react';
 // Images
 import img from '../assets/img/images';
@@ -7,27 +8,22 @@ import { addOutline } from 'ionicons/icons';
 
 import Modal from '../components/modal';
 import { Testimonial } from '../types/types';
+
 import testimonialData from '../data/testimonials.json';
 
 function About() {
-    const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial>({
+    const { 
+        isModalOpen, 
+        selectedItem: selectedTestimonial, 
+        openModal, 
+        closeModal 
+    } = useModal<Testimonial>({
         image: '',
         title: '',
         content: {
             text: ''
         }
     });
-    
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    
-    const openModal = (testimonial: Testimonial) => {
-        setSelectedTestimonial(testimonial);
-        setIsModalOpen(true);
-    };
-    
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
 
     return(
             <article className="about active" data-page="about">
@@ -73,7 +69,11 @@ function About() {
                             <div 
                                 className="content-card" 
                                 data-testimonials-item 
-                                onClick={() => openModal(testimonial)}
+                                onClick={() => openModal({
+                                    image: img[testimonial.image as keyof typeof img],
+                                    title: testimonial.title,
+                                    content: testimonial.content
+                                })}
                             >
                                 <figure className="testimonials-avatar-box">
                                     <img 
