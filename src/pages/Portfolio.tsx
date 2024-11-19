@@ -7,6 +7,7 @@ import Modal from '../components/modal';
 import { Project } from '../types/types';
 
 import img from '../assets/img/images';
+
 import projectsData from '../data/projects.json';
 
 function Portfolio() {
@@ -65,10 +66,8 @@ function Portfolio() {
       <Modal 
         isOpen={isModalOpen}
         onClose={closeModal}
-        image={selectedProject.image}
-        title={selectedProject.title}
-        content={selectedProject.content}
         type="project"
+        data={selectedProject}
       />
     </article>
   );

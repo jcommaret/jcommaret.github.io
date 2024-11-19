@@ -1,9 +1,18 @@
 import { IonIcon } from '@ionic/react';
 import { closeOutline } from 'ionicons/icons';
-import { ModalProps } from '../../types/types';
+
+import { Project, Testimonial, ModalProps } from '../../types/types';
+
 import './index.scss';
 
-function Modal({ isOpen, onClose, image, title, content, type }: ModalProps) {
+function Modal({ isOpen, onClose, type, data }: ModalProps) {
+  const content = type === 'project' 
+    ? (data as Project).content
+    : (data as Testimonial).content;
+    
+  const isProject = type === 'project';
+  const projectContent = isProject ? content as Project['content'] : null;
+  
   return (
     <div className={`modal-container ${isOpen ? 'active' : ''}`}>
       <div className={`modal-overlay ${isOpen ? 'active' : ''}`} onClick={onClose}></div>
@@ -13,20 +22,20 @@ function Modal({ isOpen, onClose, image, title, content, type }: ModalProps) {
         </button>
         <div className="modal-img-wrapper">
           <figure className="modal-avatar-box">
-            <img src={image} alt={title} data-modal-img />
+            <img src={data.image} alt={data.title} data-modal-img />
           </figure>
         </div>
         <div className="modal-content">
-          <h4 className="h3 modal-title">{title}</h4>
+          <h4 className="h3 modal-title">{data.title}</h4>
           <div>
             <p>{content.text}</p>
-            {type === 'project' && content.technologies && (
+            {isProject && projectContent?.technologies && (
               <p className="technologies">
-                <strong>Technologies utilisées :</strong> {content.technologies}
+                <strong>Technologies utilisées :</strong> {projectContent.technologies}
               </p>
             )}
-            {type === 'project' && content.link && (
-              <a href={content.link} target="_blank" rel="noopener noreferrer" className="project-link">
+            {isProject && projectContent?.link && (
+              <a href={projectContent.link} target="_blank" rel="noopener noreferrer" className="project-link">
                 Voir le projet
               </a>
             )}

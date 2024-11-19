@@ -1,9 +1,5 @@
-// Library
 import { IonIcon } from '@ionic/react';
-
-// Icons
 import { bookOutline } from 'ionicons/icons';
-
 
 function Resume() {
   return(

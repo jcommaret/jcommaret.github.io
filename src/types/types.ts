@@ -1,4 +1,3 @@
-
 export interface NavItem {
   name: string;
   path: string;
@@ -22,8 +21,8 @@ export interface Project {
   category: string;
   content: {
     text: string;
-    technologies: string;
-    link: string;
+    technologies?: string;
+    link?: string;
   };
 }
 
@@ -38,14 +37,8 @@ export interface Testimonial {
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  image: string;
-  title: string;
-  content: {
-    text: string;
-    technologies?: string;
-    link?: string;
-  };
   type: 'testimonial' | 'project';
+  data: Project | Testimonial;
 }
 
 export interface ImageAssets {
