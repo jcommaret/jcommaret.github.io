@@ -16,5 +16,4 @@ const img = {
     avatarImage3 : new URL('./avatars/avatar-3.png', import.meta.url).href,
     avatarImage4 : new URL('./avatars/avatar-4.png', import.meta.url).href,
 }
-
 export default img
