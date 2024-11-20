@@ -5,11 +5,13 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom"
 
 // Import the pages
 import Root from "./pages/root"
-import About from "./pages/About"
-import Resume from "./pages/Resume"
-import Portfolio from "./pages/Portfolio"
-import Blog from "./pages/Blog"
-import ErrorPage from "./pages/ErrorPage"
+import About from "./pages/about"
+import Resume from "./pages/resume"
+import Portfolio from "./pages/portfolio"
+import Blog from "./pages/blog"
+import ErrorPage from "./pages/error"
+
+import "./App.scss"
 
 // Render the application
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -21,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="about" element={<About />} />
           <Route path="resume" element={<Resume />} />
           <Route path="projets" element={<Portfolio />} />
-          <Route path="blog" element={<Blog />} />
+          <Route path="blog" element={<Blog />} /> 
         </Route>
       </Routes>
     </Router>
