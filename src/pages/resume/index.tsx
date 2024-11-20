@@ -5,7 +5,7 @@ function Resume() {
   return(
     <article className="resume active">
         <header>
-          <h2 className="h2 article-title">CV</h2>
+          <h2 className="h2 page-title">CV</h2>
         </header>
 
         <section className="timeline">
@@ -21,7 +21,7 @@ function Resume() {
               <h4 className="h4 timeline-item-title">Développeur Fullstack @ Crowdaa</h4>
               <span>Janvier 2024 - Juin 2024</span>
               <p className="timeline-text">
-                Crowdaa est un SASS, cloud no code qui permet aux utilisateur créer des applications iOS / Android sans écrire une seule ligne de code.
+                Crowdaa est un SAAS, cloud no code qui permet aux utilisateur créer des applications iOS / Android sans écrire une seule ligne de code.
                 En tant que développeur fullstack, j'ai eu pour mission de développer des fonctionnalités sur le back-end et le front-end.
                 <br />
                 <b>Projets :</b> Systemik RH (plateforme de formation pour les RH)- Kaltaresa (plateforme de réservation de restaurant - beauté)

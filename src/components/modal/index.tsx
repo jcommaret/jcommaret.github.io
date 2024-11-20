@@ -26,7 +26,7 @@ function Modal({ isOpen, onClose, type, data }: ModalProps) {
           </figure>
         </div>
         <div className="modal-content">
-          <h4 className="h3 modal-title">{data.title}</h4>
+          <h4 className="h4 modal-title">{data.title}</h4>
           <div>
             <p>{content.text}</p>
             {isProject && projectContent?.technologies && (

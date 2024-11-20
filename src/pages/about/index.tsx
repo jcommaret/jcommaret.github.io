@@ -12,6 +12,8 @@ import { Testimonial } from '../../types/types';
 // Assets & data
 import img from '../../assets/img/images';
 import testimonialData from '../../data/testimonials.json';
+
+// Styles
 import './index.scss';
 
 function About() {
@@ -29,9 +31,9 @@ function About() {
     });
 
     return(
-            <article className="about active" data-page="about">
-                <header>
-                <h2 className="h2 article-title">A propos</h2>
+        <article className="about active" data-page="about">
+            <header>
+                <h2 className="h2 page-title">A propos</h2>
             </header>
 
             <section className="about-text">
@@ -39,9 +41,9 @@ function About() {
                 <p>Avec un regard porté sur les performances, je code, je manage, et j'innove.</p>
                 <p>Polyvalent, j'ai déjà travaillé pour des grands groupes internationnaux mais également pour des startups. J'ai une très bonne maitrise de la chaine de production grâce à des expériences en gestion de projet technique et fonctionnelle.</p>
             </section>
-        
+
             <section className="service">
-                <h3 className="h3 service-title">Activités</h3>
+                <h3 className="h3">Activités</h3>
                 <ul className="service-list">
                     <li className="service-item">
                     <div className="service-icon-box">
@@ -63,9 +65,9 @@ function About() {
                     </li>
                 </ul>
             </section>
-            
+        
             <section className="testimonials">
-                <h3 className="h3 testimonials-title">Témoignages</h3>
+                <h3 className="h3">Témoignages</h3>
                 <ul className="testimonials-list">
                     {testimonialData.testimonials.map((testimonial, index) => (
                         <li key={index} className="testimonials-item">
@@ -91,15 +93,15 @@ function About() {
                                 <div className="testimonials-text">
                                     <p>{testimonial.content.text}</p>
                                 </div>
-                                <div className="testimonial-expand-icon-wrapper">
-                                    <IonIcon icon={addOutline} className="testimonial-expand-icon" />
+                                <div className="testimonials-expand-icon-wrapper">
+                                    <IonIcon icon={addOutline} className="testimonials-expand-icon" />
                                 </div>
                             </div>
                         </li>
                     ))}
                 </ul>
             </section>
-            
+        
             <Modal 
                 isOpen={isModalOpen}
                 onClose={closeModal}
