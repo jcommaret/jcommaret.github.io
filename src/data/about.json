@@ -1,0 +1,50 @@
+{
+  "aboutText": [
+    "Je suis un développeur web et mobile basé à Paris.",
+    "Avec un regard porté sur les performances, je code, je manage, et j'innove.",
+    "Polyvalent, j'ai déjà travaillé pour des grands groupes internationnaux mais également pour des startups.",
+    "J'ai une très bonne maitrise de la chaine de production grâce à des expériences en gestion de projet technique et fonctionnelle."
+  ],
+  "services": [
+    {
+      "icon": "iconDev",
+      "title": "Lead Front",
+      "description": "Lead d'équipe, Scrum, Kanban, mise en place de CI/CD, gestion des niveau de seniorité, de compétences..."
+    },
+    {
+      "icon": "iconApp",
+      "title": "Applications mobile",
+      "description": "Dévelopemment d'applications, de sites webs, en utilisant React, Vite, Flutter, Wordpress..."
+    }
+  ],
+  "testimonials": [
+    {
+      "image": "avatarImage1",
+      "title": "Daniel lewis",
+      "content": {
+        "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client."
+      }
+    },
+    {
+      "image": "avatarImage2",
+      "title": "Jessica miller",
+      "content": {
+        "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client."
+      }
+    },
+    {
+      "image": "avatarImage3",
+      "title": "Emily evans",
+      "content": {
+        "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client."
+      }
+    },
+    {
+      "image": "avatarImage4",
+      "title": "Henry william",
+      "content": {
+        "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client."
+      }
+    }
+  ]
+}

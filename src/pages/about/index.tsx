@@ -9,12 +9,15 @@ import { useModal } from '../../hooks/useModal';
 // Types
 import { Testimonial } from '../../types/types';
 
-// Assets & data
+// Assets
 import img from '../../assets/img/images';
-import testimonialData from '../../data/testimonials.json';
+
+// Data
+import aboutData from '../../data/about.json';
 
 // Styles
 import './index.scss';
+
 
 function About() {
     const { 
@@ -37,39 +40,32 @@ function About() {
             </header>
 
             <section className="about-text">
-                <p>Je suis un développeur web et mobile basé à Paris.</p>
-                <p>Avec un regard porté sur les performances, je code, je manage, et j'innove.</p>
-                <p>Polyvalent, j'ai déjà travaillé pour des grands groupes internationnaux mais également pour des startups. J'ai une très bonne maitrise de la chaine de production grâce à des expériences en gestion de projet technique et fonctionnelle.</p>
+                {aboutData.aboutText.map((text, index) => (
+                    <p key={index}>{text}</p>
+                ))}
             </section>
 
             <section className="service">
                 <h3 className="h3">Activités</h3>
                 <ul className="service-list">
-                    <li className="service-item">
-                    <div className="service-icon-box">
-                        <img className='service-icon-icon' src={img.iconDev} alt="Web development icon" width="40" />
-                    </div>
-                    <div className="service-content-box">
-                        <h4 className="h4 service-item-title">Lead Front</h4>
-                        <p className="service-item-text">Lead d'équipe, Scrum, Kanban, mise en place de CI/CD, gestion des niveau de seniorité, de compétences...</p>
-                    </div>
-                    </li>
-                    <li className="service-item">
-                    <div className="service-icon-box">
-                        <img src={img.iconApp} alt="mobile app icon" width="40" />
-                    </div>
-                    <div className="service-content-box">
-                        <h4 className="h4 service-item-title">Applications mobile</h4>
-                        <p className="service-item-text">Dévelopemment d'applications, de sites webs, en utilisant React, Vite, Flutter, Wordpress...</p>
-                    </div>
-                    </li>
+                    {aboutData.services.map((service, index) => (
+                        <li key={index} className="service-item">
+                            <div className="service-icon-box">
+                                <img className='service-icon-icon' src={img[service.icon as keyof typeof img]} alt="Web development icon" width="40" />
+                            </div>
+                            <div className="service-content-box">
+                                <h4 className="h4 service-item-title">{service.title}</h4>
+                                <p className="service-item-text">{service.description}</p>
+                            </div>
+                        </li>
+                    ))}
                 </ul>
             </section>
         
             <section className="testimonials">
                 <h3 className="h3">Témoignages</h3>
                 <ul className="testimonials-list">
-                    {testimonialData.testimonials.map((testimonial, index) => (
+                    {aboutData.testimonials.map((testimonial, index) => (
                         <li key={index} className="testimonials-item">
                             <div 
                                 className="content-card" 
