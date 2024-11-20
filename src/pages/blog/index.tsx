@@ -1,7 +1,8 @@
 // Images
-import img from '../assets/img/images';
+import img from '../../assets/img/images';
 
-// Blog
+import './index.scss';
+
 function Blog() {
   return (
       <article className="blog active" data-page="blog">

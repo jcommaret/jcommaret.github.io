@@ -1,15 +1,18 @@
-import { useModal } from '../hooks/useModal';
-
+// External dependencies
 import { IonIcon } from '@ionic/react';
-// Images
-import img from '../assets/img/images';
-// Icons
 import { addOutline } from 'ionicons/icons';
 
-import Modal from '../components/modal';
-import { Testimonial } from '../types/types';
+// Internal components & hooks
+import Modal from '../../components/modal';
+import { useModal } from '../../hooks/useModal';
 
-import testimonialData from '../data/testimonials.json';
+// Types
+import { Testimonial } from '../../types/types';
+
+// Assets & data
+import img from '../../assets/img/images';
+import testimonialData from '../../data/testimonials.json';
+import './index.scss';
 
 function About() {
     const { 

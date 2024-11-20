@@ -1,9 +1,9 @@
-import { useModal } from '../hooks/useModal';
+import { useModal } from '../../hooks/useModal';
 
-import { Project } from '../types/types';
-import Modal from '../components/modal';
-import img from '../assets/img/images';
-import projectsData from '../data/projects.json';
+import { Project } from '../../types/types';
+import Modal from '../../components/modal';
+import img from '../../assets/img/images';
+import projectsData from '../../data/projects.json';
 
 function Portfolio() {
   const { 
