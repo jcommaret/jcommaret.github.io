@@ -54,7 +54,7 @@ function About() {
                                 <img className='service-icon-icon' src={img[service.icon as keyof typeof img]} alt="Web development icon" width="40" />
                             </div>
                             <div className="service-content-box">
-                                <h4 className="h4 service-item-title">{service.title}</h4>
+                                <h4 className="service-item-title">{service.title}</h4>
                                 <p className="service-item-text">{service.description}</p>
                             </div>
                         </li>
@@ -83,7 +83,7 @@ function About() {
                                         data-testimonials-avatar 
                                     />
                                 </figure>
-                                <h4 className="h4 testimonials-item-title">
+                                <h4 className="testimonials-item-title">
                                     {testimonial.title}
                                 </h4>
                                 <div className="testimonials-text">
