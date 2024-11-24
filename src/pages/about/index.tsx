@@ -36,7 +36,7 @@ function About() {
     return(
         <article className="about active" data-page="about">
             <header>
-                <h2 className="h2 page-title">A propos</h2>
+                <h2 className="page-title">A propos</h2>
             </header>
 
             <section className="about-text">
@@ -46,7 +46,7 @@ function About() {
             </section>
 
             <section className="service">
-                <h3 className="h3">Activités</h3>
+                <h3>Activités</h3>
                 <ul className="service-list">
                     {aboutData.services.map((service, index) => (
                         <li key={index} className="service-item">
@@ -63,7 +63,7 @@ function About() {
             </section>
         
             <section className="testimonials">
-                <h3 className="h3">Témoignages</h3>
+                <h3>Témoignages</h3>
                 <ul className="testimonials-list">
                     {aboutData.testimonials.map((testimonial, index) => (
                         <li key={index} className="testimonials-item">

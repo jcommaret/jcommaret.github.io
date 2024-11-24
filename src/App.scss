@@ -61,13 +61,13 @@ article{
   margin-bottom: 20px;
 }
 
-.h2, .h3, .h4 {
+h2, h3, h4 {
   @extend %heading-base;
 }
 
-.h2 { font-size: var(--fs-1); }
-.h3 { font-size: var(--fs-2); }
-.h4 { font-size: var(--fs-4); }
+h2 { font-size: var(--fs-1); }
+h3 { font-size: var(--fs-2); }
+h4 { font-size: var(--fs-4); }
 
 .page-title {
   position: relative;

@@ -25,7 +25,7 @@ function Portfolio() {
   return (
     <article className="portfolio active">
       <header>
-        <h2 className="h2 page-title">Mes projets</h2>
+        <h2 className="page-title">Mes projets</h2>
       </header>
 
       <section className="projects">
