@@ -69,3 +69,16 @@ export interface MediumPost {
   description: string;
 }
 
+export interface MediumApiResponse {
+  status: string;
+  feed: {
+    url: string;
+    title: string;
+    link: string;
+    author: string;
+    description: string;
+    image: string;
+  };
+  items: MediumPost[];
+}
+

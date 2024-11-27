@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { MediumPost } from '../../types/types';
+import { useState, useEffect, useMemo } from 'react';
+
+import { MediumPost, MediumApiResponse } from '../../types/types';
 
 import img from '../../assets/img/images';
 import './index.scss';
@@ -9,7 +10,7 @@ function Blog() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fallbackImages = [
+  const fallbackImages = useMemo(() => [
     img.blogImage1,
     img.blogImage2,
     img.blogImage3,
@@ -18,7 +19,7 @@ function Blog() {
     img.blogImage6,
     img.blogImage7,
     img.blogImage8 // Ajoutez autant d'images que nécessaire
-  ];
+  ], []); // tableau de dépendances vide car les images sont statiques
 
   useEffect(() => {
     const fetchMediumPosts = async () => {
@@ -31,8 +32,8 @@ function Blog() {
           throw new Error('Erreur lors de la récupération des articles');
         }
 
-        const data = await response.json();
-        setPosts(data.items.map((item: any, index: number) => ({
+        const data: MediumApiResponse = await response.json();
+        setPosts(data.items.map((item, index) => ({
           title: item.title,
           thumbnail: fallbackImages[index % fallbackImages.length],
           categories: item.categories,
@@ -48,7 +49,7 @@ function Blog() {
     };
 
     fetchMediumPosts();
-  }, []);
+  }, [fallbackImages]);
 
   if (loading) return <div>Chargement des articles...</div>;
   if (error) return <div>Erreur : {error}</div>;
