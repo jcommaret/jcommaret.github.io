@@ -1,168 +1,96 @@
-// Images
+import { useState, useEffect } from 'react';
+import './index.scss';
 import img from '../../assets/img/images';
 
-import './index.scss';
-
 function Blog() {
+  const [posts, setPosts] = useState<MediumPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const fallbackImages = [
+    img.blogImage1,
+    img.blogImage2,
+    img.blogImage3,
+    img.blogImage4,
+    img.blogImage5,
+    img.blogImage6,
+    img.blogImage7,
+    img.blogImage8
+    // Ajoutez autant d'images que nécessaire
+  ];
+
+  useEffect(() => {
+    const fetchMediumPosts = async () => {
+      try {
+        const response = await fetch(
+          'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jcommaret'
+        );
+        
+        if (!response.ok) {
+          throw new Error('Erreur lors de la récupération des articles');
+        }
+
+        const data = await response.json();
+        setPosts(data.items.map((item: any, index: number) => ({
+          title: item.title,
+          thumbnail: item.thumbnail || fallbackImages[index % fallbackImages.length],
+          categories: item.categories,
+          pubDate: new Date(item.pubDate).toLocaleDateString('fr-FR'),
+          link: item.link,
+          description: item.description.replace(/<[^>]*>/g, '').slice(0, 150) + '...'
+        })));
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Une erreur est survenue');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMediumPosts();
+  }, []);
+
+  if (loading) return <div>Chargement des articles...</div>;
+  if (error) return <div>Erreur : {error}</div>;
+
+
   return (
-      <article className="blog active" data-page="blog">
-        <header>
-          <h2 className="page-title">Blog</h2>
-        </header>
-        <section className="blog-posts">
-          <ul className="blog-posts-list">
-            <li className="blog-post-item">
-              <a href="#">
+    <article className="blog active" data-page="blog">
+      <header>
+        <h2 className="page-title">Blog</h2>
+      </header>
+      <section className="blog-posts">
+        <ul className="blog-posts-list">
+          {posts.map((post, index) => (
+            <li key={index} className="blog-post-item">
+              <a href={post.link} target="_blank" rel="noopener noreferrer">
                 <figure className="blog-banner-box">
-                  <img src={img.blogImage1} alt="Design conferences in 2022" loading="lazy"/>
+                  <img 
+                    src={post.thumbnail} 
+                    alt={post.title}
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = fallbackImages[index % fallbackImages.length];
+                      target.onerror = null;
+                    }}
+                    loading="lazy"
+                  />
                 </figure>
                 <div className="blog-content">
                   <div className="blog-meta">
-                    <p className="blog-category">Design</p>
+                    <p className="blog-category">{post.categories[0]}</p>
                     <span className="dot"></span>
-                    <time dateTime="2022-02-23">Fab 23, 2022</time>
+                    <time dateTime={post.pubDate}>{post.pubDate}</time>
                   </div>
-                  <h3 className="h3 blog-item-title">Design conferences in 2022</h3>
-                  <p className="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
+                  <h3 className="h3 blog-item-title">{post.title}</h3>
+                  <p className="blog-text">{post.description}</p>
                 </div>
               </a>
             </li>
-
-            <li className="blog-post-item">
-              <a href="#">
-                <figure className="blog-banner-box">
-                  <img src={img.blogImage2} alt="Best fonts every designer" loading="lazy"/>
-                </figure>
-                <div className="blog-content">
-                  <div className="blog-meta">
-                    <p className="blog-category">Design</p>
-                    <span className="dot"></span>
-                    <time dateTime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 className="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p className="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li className="blog-post-item">
-              <a href="#">
-
-                <figure className="blog-banner-box">
-                  <img src={img.blogImage3} alt="Design digest #80" loading="lazy" />
-                </figure>
-
-                <div className="blog-content">
-
-                  <div className="blog-meta">
-                    <p className="blog-category">Design</p>
-
-                    <span className="dot"></span>
-
-                    <time dateTime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 className="h3 blog-item-title">Design digest #80</h3>
-
-                  <p className="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li className="blog-post-item">
-              <a href="#">
-
-                <figure className="blog-banner-box">
-                  <img src={img.blogImage4} alt="UI interactions of the week" loading="lazy"/>
-                </figure>
-
-                <div className="blog-content">
-
-                  <div className="blog-meta">
-                    <p className="blog-category">Design</p>
-
-                    <span className="dot"></span>
-
-                    <time dateTime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 className="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p className="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li className="blog-post-item">
-              <a href="#">
-
-                <figure className="blog-banner-box">
-                  <img src={img.blogImage5} alt="The forgotten art of spacing" loading="lazy" />
-                </figure>
-
-                <div className="blog-content">
-
-                  <div className="blog-meta">
-                    <p className="blog-category">Design</p>
-
-                    <span className="dot"></span>
-
-                    <time dateTime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 className="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p className="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li className="blog-post-item">
-              <a href="#">
-
-                <figure className="blog-banner-box">
-                  <img src={img.blogImage6} alt="Design digest #79" loading="lazy" />
-                </figure>
-
-                <div className="blog-content">
-
-                  <div className="blog-meta">
-                    <p className="blog-category">Design</p>
-
-                    <span className="dot"></span>
-
-                    <time dateTime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-                  <h3 className="h3 blog-item-title">Design digest #79</h3>
-                  <p className="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </article>
-    );
+          ))}
+        </ul>
+      </section>
+    </article>
+  );
 }
+
 export default Blog;

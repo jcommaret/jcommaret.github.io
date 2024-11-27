@@ -2,7 +2,6 @@ import { IonIcon } from '@ionic/react';
 import { bookOutline } from 'ionicons/icons';
 import resumeData from '../../data/resume.json';
 
-
 function Resume() {
   return(
     <article className="resume active">
