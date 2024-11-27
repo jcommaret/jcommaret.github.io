@@ -6,7 +6,7 @@ function Resume() {
   return(
     <article className="resume active">
       <header>
-        <h2 className="page-title">CV</h2>
+        <h2>CV</h2>
       </header>
 
       <section className="timeline">

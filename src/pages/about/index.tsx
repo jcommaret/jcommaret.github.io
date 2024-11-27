@@ -36,7 +36,7 @@ function About() {
     return(
         <article className="about active" data-page="about">
             <header>
-                <h2 className="page-title">A propos</h2>
+                <h2>A propos</h2>
             </header>
 
             <section className="about-text">
