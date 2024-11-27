@@ -5,6 +5,7 @@ import Modal from '../../components/modal';
 import img from '../../assets/img/images';
 import projectsData from '../../data/projects.json';
 
+import './index.scss';
 function Portfolio() {
   const { 
     isModalOpen, 
