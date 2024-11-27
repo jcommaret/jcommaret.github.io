@@ -60,3 +60,12 @@ export interface ImageAssets {
   avatarImage4: string;
 }
 
+export interface MediumPost {
+  title: string;
+  thumbnail: string;
+  categories: string[];
+  pubDate: string;
+  link: string;
+  description: string;
+}
+

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
-import './index.scss';
+import { MediumPost } from '../../types/types';
+
 import img from '../../assets/img/images';
+import './index.scss';
 
 function Blog() {
   const [posts, setPosts] = useState<MediumPost[]>([]);
@@ -15,8 +17,7 @@ function Blog() {
     img.blogImage5,
     img.blogImage6,
     img.blogImage7,
-    img.blogImage8
-    // Ajoutez autant d'images que nécessaire
+    img.blogImage8 // Ajoutez autant d'images que nécessaire
   ];
 
   useEffect(() => {
@@ -33,7 +34,7 @@ function Blog() {
         const data = await response.json();
         setPosts(data.items.map((item: any, index: number) => ({
           title: item.title,
-          thumbnail: item.thumbnail || fallbackImages[index % fallbackImages.length],
+          thumbnail: fallbackImages[index % fallbackImages.length],
           categories: item.categories,
           pubDate: new Date(item.pubDate).toLocaleDateString('fr-FR'),
           link: item.link,
