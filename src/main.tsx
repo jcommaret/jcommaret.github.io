@@ -8,7 +8,7 @@ import Root from "./pages/root"
 import About from "./pages/about"
 import Resume from "./pages/resume"
 import Portfolio from "./pages/portfolio"
-import Blog from "./pages/blog"
+//import Blog from "./pages/blog"
 import ErrorPage from "./pages/error"
 
 import "./App.scss"
