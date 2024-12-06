@@ -1,6 +1,6 @@
 # Vite + TypeScript + Gh-Pages 
 
-This is my porflio, using the T.G.V. (Typescript, Gh-Pages, Vite, Gh-Pages) Framework.
+This is my porfolio, using the T.G.V. (Typescript, Gh-Pages, Vite) Framework.
 
 The project is build with the help of the [Vite](https://vitejs.dev/) framework, and the code is written in [Typescript](https://www.typescriptlang.org/).
 
