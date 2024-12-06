@@ -1,6 +1,11 @@
 {
     "experiences": [
       {
+        "title": "Professeur de Travaux Dirigés @ Efrei",
+        "period": "Novembre 2023",
+        "description": "En temps que professeur de TD, j'ai appris aux étudiants a utiliser Angular/Flutter/Firebase et pour développer des applications mobiles et web."
+      },
+      {
         "title": "Développeur Fullstack @ Crowdaa",
         "period": "Janvier 2024 - Juin 2024",
         "description": "Crowdaa est un SAAS, cloud no code qui permet aux utilisateur créer des applications iOS / Android sans écrire une seule ligne de code. En tant que développeur fullstack, j'ai eu pour mission de développer des fonctionnalités sur le back-end et le front-end.",
