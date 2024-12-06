@@ -19,31 +19,31 @@
   ],
   "testimonials": [
     {
-      "image": "avatarImage1",
-      "title": "Daniel lewis",
-      "content": {
-        "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client."
-      }
-    },
-    {
-      "image": "avatarImage2",
-      "title": "Jessica miller",
-      "content": {
-        "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client."
-      }
-    },
-    {
       "image": "avatarImage3",
-      "title": "Emily evans",
+      "title": "Sonja T",
       "content": {
-        "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client."
+        "text": "J'ai eu l'occasion de travailler sur plusieurs projets avec Jérôme alors que j'étais que responsable éditoriale. Ce dernier est toujours à l'écoute des demandes qui lui sont faites. Extrêmement compétent dans son domaine, il sait être pédagogue quand il le faut. Il sait prioriser et travaille toujours avec beaucoup de sérieux et d'enthousiasme. Ses connaissances des nouvelles technologies et des nouveaux media font de lui un élément indispensable pour une entreprise. Il sait relever les challenges qui lui sont proposés."
       }
     },
     {
       "image": "avatarImage4",
-      "title": "Henry william",
+      "title": "Camille R",
       "content": {
-        "text": "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client."
+        "text": "J'ai toujours connu Jérôme avec des idées fraîches, créatives et ambitieuses. Nous avons eu l'occasion de travailler ensemble pour le compte d'un de mes projets, sur des problématiques techniques et marketing pointues. Faire l'expérience de ses talents et expertises n'a pas été une surprise, Jérôme est quelqu'un de vraiment très très fiable et passionné par son métier. C'est le genre de personne qui pousse les autres vers le haut et qui le fait avec beaucoup de sentiments et de modestie."
+      }
+    },
+    {
+      "image": "avatarImage2",
+      "title": "Nathalie D",
+      "content": {
+        "text": "Je n'ai pas rencontré beaucoup de personnes comme Jérôme dans ma carrière. J’ai eu l'occasion de travailler avec lui pendant 6 mois alors qu'il était Web & Mobile Project Manager chez Régime Coach et nous avons collaboré sur des projets d’envergure. C'est un geek assumé, qui paradoxalement a su faire preuve d'une grande pédagogie et de proximité avec les équipes métiers. Très au fait de l'écosystème dans lequel il a développé ses domaines de compétences, Jérôme est un expert en gestion de projets digitaux tant sur le plan technique que stratégique. Il est également capable d'une grande adaptabilité qui peut se révéler un véritable atout pour toute entreprise qui l'emploierait."
+      }
+    },
+    {
+      "image": "avatarImage1",
+      "title": "Rose E",
+      "content": {
+        "text": "I had the pleasure to work with Jérôme and if you need someone who has great managerial skills and who is also a technical profile, you should definitely hire him. His knowledge of the production chain makes him great at doing what he does. He is a person who can adapt and learn quickly, and his mobile / e-commerce and localisation skills, makes him a valuable person in every teams, to build really great digital product."
       }
     }
   ]
