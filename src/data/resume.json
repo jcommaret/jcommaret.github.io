@@ -1,77 +1,77 @@
 {
-    "experiences": [
-      {
-        "title": "Professeur de Travaux Dirigés @ Efrei",
-        "period": "Novembre 2023",
-        "description": "En temps que professeur de TD, j'ai appris aux étudiants a utiliser Angular/Flutter/Firebase et pour développer des applications mobiles et web."
-      },
-      {
-        "title": "Développeur Fullstack @ Crowdaa",
-        "period": "Janvier 2024 - Juin 2024",
-        "description": "Crowdaa est un SAAS, cloud no code qui permet aux utilisateur créer des applications iOS / Android sans écrire une seule ligne de code. En tant que développeur fullstack, j'ai eu pour mission de développer des fonctionnalités sur le back-end et le front-end.",
-        "projects": "Systemik RH (plateforme de formation pour les RH)- Kaltaresa (plateforme de réservation de restaurant - beauté)",
-        "technologies": "Wordpress, Javascript, PHP, MAMP, Wordpress, Flutter, React, CI/CD",
-        "tools": "Scrum, Jira, GitLab, Slack"
-      },
-      {
-        "title": "Front-End Manager @ LeLynx.fr",
-        "period": "Février 2021 - Juillet 2022",
-        "description": "Le Lynx est un comparateur d'assurance en ligne. En tant que Front-End Manager, j'ai eu pour mission de développer des fonctionnalités, mais aussi d'encardrer une équipe de 2 développeurs.",
-        "projects": "Le Lynx.fr - Demenagez-malynx.fr",
-        "technologies": "Wordpress, Javascript, PHP, MAMP, Angular, CI/CD",
-        "tools": "Scrum, Jira, Bitbucket, Trello, Slack"
-      },
-      {
-        "title": "Développeur Fullstack @ ImagineApp",
-        "period": "Juillet 2019 - Janv. 2021",
-        "description": "Imagine app est une ESN"
-      },
-      {
-        "title": "Développeur Front-End @ SQLI",
-        "period": "Juillet 2019 - Janv. 2021",
-        "description": "SQLI est une ESN"
-      },
-      {
-        "title": "Développeur Fullstack @ Eexpand",
-        "period": "Juillet 2019 - Janv. 2021",
-        "description": "Eexpand édite un Linkedin de l'import-export"
-      },
-      {
-        "title": "Lead Tech Front @ Publicis-Sapient - (former DigitasLbi)",
-        "period": "Juillet 2019 - Janv. 2021",
-        "description": "Publicis-sapient, est un acteur digital du groupe Publicis"
-      },
-      {
-        "title": "CTO @ MeetMyJob",
-        "period": "Juillet 2019 - Janv. 2021",
-        "description": "Meet My Job etait une startup qui proposait aux particuliers, de découvrir les métiers de l'artisanat"
-      },
-      {
-        "title": "Digital Activation Manager @ The CocaCola Company France",
-        "period": "Décembre 2013 - Octobre 2014",
-        "description": "Au sein de Coca-cola, j'ai travaillé sur les 12 sites des 12 marques du groupe."
-      },
-      {
-        "title": "Chef de projet web @ Diverses entreprises (Tequila Rapido, Publicis Modem...)",
-        "period": "Mars 2011 - Juin 2013",
-        "description": "Suite à mes études à Hétic, j'ai eu l'opportunité de travailler pour de petites agences de communication, aussi bien que pour de très grand groupes"
-      }
-    ],
-    "education": [
-      {
-        "school": "Openclassrooms",
-        "period": "2021 — 2022",
-        "description": "Formation de développeur d'applications javascript/react"
-      },
-      {
-        "school": "Georgia Tech",
-        "period": "2021 — 2022",
-        "description": "Certification en Innovation leadership"
-      },
-      {
-        "school": "Hétic",
-        "period": "2007-2010",
-        "description": "Diplôme de Master d'expert en ingénierie et management des technologies de l'information et de la communication"
-      }
-    ]
-  }
+  "experiences": [
+    {
+      "title": "Professeur de Travaux Dirigés @ Efrei",
+      "period": "Novembre 2024",
+      "description": "En temps que professeur de TD, j'ai appris aux étudiants a utiliser Angular/Flutter/Firebase et pour développer des applications mobiles et web."
+    },
+    {
+      "title": "Développeur Fullstack @ Crowdaa",
+      "period": "Janvier 2024 - Juin 2024",
+      "description": "Crowdaa est un SAAS, cloud no code qui permet aux utilisateur créer des applications iOS / Android sans écrire une seule ligne de code. En tant que développeur fullstack, j'ai eu pour mission de développer des fonctionnalités sur le back-end et le front-end.",
+      "projects": "Systemik RH (plateforme de formation pour les RH)- Kaltaresa (plateforme de réservation de restaurant - beauté)",
+      "technologies": "Wordpress, Javascript, PHP, MAMP, Wordpress, Flutter, React, CI/CD",
+      "tools": "Scrum, Jira, GitLab, Slack"
+    },
+    {
+      "title": "Front-End Manager @ LeLynx.fr",
+      "period": "Février 2021 - Juillet 2022",
+      "description": "Le Lynx est un comparateur d'assurance en ligne. En tant que Front-End Manager, j'ai eu pour mission de développer des fonctionnalités, mais aussi d'encardrer une équipe de 2 développeurs.",
+      "projects": "Le Lynx.fr - Demenagez-malynx.fr",
+      "technologies": "Wordpress, Javascript, PHP, MAMP, Angular, CI/CD",
+      "tools": "Scrum, Jira, Bitbucket, Trello, Slack"
+    },
+    {
+      "title": "Développeur Fullstack @ ImagineApp",
+      "period": "Juillet 2019 - Janv. 2021",
+      "description": "Imagine app est une ESN"
+    },
+    {
+      "title": "Développeur Front-End @ SQLI",
+      "period": "Juillet 2019 - Janv. 2021",
+      "description": "SQLI est une ESN"
+    },
+    {
+      "title": "Développeur Fullstack @ Eexpand",
+      "period": "Juillet 2019 - Janv. 2021",
+      "description": "Eexpand édite un Linkedin de l'import-export"
+    },
+    {
+      "title": "Lead Tech Front @ Publicis-Sapient - (former DigitasLbi)",
+      "period": "Juillet 2019 - Janv. 2021",
+      "description": "Publicis-sapient, est un acteur digital du groupe Publicis"
+    },
+    {
+      "title": "CTO @ MeetMyJob",
+      "period": "Juillet 2019 - Janv. 2021",
+      "description": "Meet My Job etait une startup qui proposait aux particuliers, de découvrir les métiers de l'artisanat"
+    },
+    {
+      "title": "Digital Activation Manager @ The CocaCola Company France",
+      "period": "Décembre 2013 - Octobre 2014",
+      "description": "Au sein de Coca-cola, j'ai travaillé sur les 12 sites des 12 marques du groupe."
+    },
+    {
+      "title": "Chef de projet web @ Diverses entreprises (Tequila Rapido, Publicis Modem...)",
+      "period": "Mars 2011 - Juin 2013",
+      "description": "Suite à mes études à Hétic, j'ai eu l'opportunité de travailler pour de petites agences de communication, aussi bien que pour de très grand groupes"
+    }
+  ],
+  "education": [
+    {
+      "school": "Openclassrooms",
+      "period": "2021 — 2022",
+      "description": "Formation de développeur d'applications javascript/react"
+    },
+    {
+      "school": "Georgia Tech",
+      "period": "2021 — 2022",
+      "description": "Certification en Innovation leadership"
+    },
+    {
+      "school": "Hétic",
+      "period": "2007-2010",
+      "description": "Diplôme de Master d'expert en ingénierie et management des technologies de l'information et de la communication"
+    }
+  ]
+}
