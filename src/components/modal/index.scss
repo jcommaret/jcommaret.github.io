@@ -1,172 +1,176 @@
 @mixin fixed-fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.modal{
-    &-avatar-box{
-        background: var(--bg-gradient-onyx);
-        width: max-content;
-        border-radius: 14px;
-        margin-bottom: 15px;
-        box-shadow: var(--shadow-2);
+.modal {
+  &-avatar-box {
+    background: var(--bg-gradient-onyx);
+    width: max-content;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow-2);
+  }
+  &-img-wrapper > img {
+    display: none;
+  }
+  &-container {
+    @include fixed-fullscreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 20;
+    &:not(.active) {
+      pointer-events: none;
+      visibility: hidden;
     }
-    &-img-wrapper > img { display: none; }
-    &-container{
-        @include fixed-fullscreen;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        z-index: 20;
-        &:not(.active) {
-            pointer-events: none;
-            visibility: hidden;
-        }
-        &.active{
-            .modal-content-wrapper{
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
+    &.active {
+      .modal-content-wrapper {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
-    &-overlay {
-        @include fixed-fullscreen;
-        background: hsla(0, 0%, 5%, 0.8);
-        z-index: 1;
-        transition: var(--transition-1);
-        &:not(.active) {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
+  }
+  &-overlay {
+    @include fixed-fullscreen;
+    background: hsla(0, 0%, 5%, 0.8);
+    z-index: 1;
+    transition: var(--transition-1);
+    &:not(.active) {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
     }
-    &-title{
-        margin-bottom: 4px;
+  }
+  &-title {
+    margin-bottom: 4px;
+  }
+  &-content {
+    padding: 15px;
+    p {
+      color: var(--light-gray);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-300);
+      line-height: 1.6;
     }
-    &-content{
-        padding: 15px;
-        p{
-            color: var(--light-gray);
-            font-size: var(--fs-6);
-            font-weight: var(--fw-300);
-            line-height: 1.6;
+    &-wrapper {
+      background: var(--eerie-black-2);
+      position: relative;
+      margin: auto;
+      width: 100%;
+      border: 1px solid var(--jet);
+      border-radius: 14px;
+      box-shadow: var(--shadow-5);
+      transform: scale(1.2);
+      opacity: 0;
+      transition: var(--transition-1);
+      z-index: 2;
+      $variants: (
+        "testimonial": (
+          max-width: 800px,
+          padding: 30px,
+          display: flex,
+          gap: 25px,
+        ),
+        "project": (
+          max-width: 600px,
+        ),
+      );
+      @each $variant, $styles in $variants {
+        &.#{$variant} {
+          @each $property, $value in $styles {
+            #{$property}: $value;
+          }
         }
-        &-wrapper{
-            background: var(--eerie-black-2);
-            position: relative;
-            margin: auto;
+      }
+      &.project {
+        width: 100%;
+        overflow-y: auto;
+        .modal-img-wrapper {
+          img {
             width: 100%;
-            border: 1px solid var(--jet);
-            border-radius: 14px;
-            box-shadow: var(--shadow-5);
-            transform: scale(1.2);
-            opacity: 0;
-            transition: var(--transition-1);
-            z-index: 2;
-            $variants: (
-                'testimonial': (
-                    max-width: 800px,
-                    padding: 30px,
-                    display: flex,
-                    gap: 25px
-                ),
-                'project': (
-                    max-width: 600px
-                )
-            );
-            @each $variant, $styles in $variants {
-                &.#{$variant} {
-                    @each $property, $value in $styles {
-                        #{$property}: $value;
-                    }
-                }
-            }
-            &.project{
-                width: 100%;
-                overflow-y: auto;
-                .modal-img-wrapper {
-                    img {
-                        width: 100%;
-                        height: auto;
-                        max-height: 50vh;
-                        object-fit: cover;
-                    }
-                }
-                .modal-avatar-box {
-                    border-radius: 0;
-                    box-shadow: none;
-                    margin-bottom: 0px;
-                }
-            }
-            .technologies {
-                margin-top: 1rem;
-                color: var(--light-gray);
-            }
+            height: auto;
+            max-height: 50vh;
+            object-fit: cover;
+          }
         }
+        .modal-avatar-box {
+          border-radius: 0;
+          box-shadow: none;
+          margin-bottom: 0px;
+        }
+      }
+      .technologies {
+        margin-top: 1rem;
+        color: var(--light-gray);
+      }
     }
-    &-close-btn{
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: var(--onyx);
-        border-radius: 8px;
-        width: 32px;
-        height: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--white-2);
-        font-size: 18px;
-        opacity: 0.7;
-        &:hover, &:focus {
-            opacity: 1;
-        }
-        ion-icon{
-            --ionicon-stroke-width: 50px;;
-        }
+  }
+  &-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--onyx);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-2);
+    font-size: 18px;
+    opacity: 0.7;
+    &:hover,
+    &:focus {
+      opacity: 1;
     }
+    ion-icon {
+      --ionicon-stroke-width: 50px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
-    .modal {
-        &-content-wrapper {
-            &.project {
-                max-width: 95vw;
-                
-                .modal-img-wrapper {
-                    img {
-                        max-height: 40vh;
-                    }
-                }
-            }
+  .modal {
+    &-content-wrapper {
+      &.project {
+        max-width: 95vw;
+
+        .modal-img-wrapper {
+          img {
+            max-height: 40vh;
+          }
         }
+      }
     }
+  }
 }
-.project-link{
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.7rem 1.4rem;
+
+.project-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  background: hsl(45, 100%, 72%);
+  color: var(--eerie-black-1);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: var(--fw-500);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background: hsl(45, 100%, 72%);
-    color: var(--eerie-black-1);
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: var(--fw-500);
-    transition: all 0.3s ease;
+  }
+
+  &:active {
+    transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    
-    &:hover {
-        opacity: 1;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        background: hsl(45, 100%, 72%);
-    }
-    
-    &:active {
-        transform: translateY(0);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
+  }
 }
