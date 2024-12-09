@@ -13,19 +13,17 @@ function ResponsiveImage({
   sizes = "100vw",
   loading = "lazy",
 }: ResponsiveImageProps) {
+  // Vérifier si l'URL est absolue
+  const isAbsoluteUrl = src.startsWith("http") || src.startsWith("data:");
+  const imagePath = isAbsoluteUrl ? src : src;
+
   return (
     <img
-      src={src}
+      src={imagePath}
       alt={alt}
       className={className}
       loading={loading}
       sizes={sizes}
-      srcSet={`
-        ${src} 300w,
-        ${src} 600w,
-        ${src} 900w,
-        ${src} 1200w
-      `}
     />
   );
 }

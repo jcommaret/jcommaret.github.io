@@ -35,11 +35,11 @@
     },
     {
       "id": 4,
-      "image": "projectImage1",
-      "title": "T.G.V. Framework",
-      "category": "Framework personnel permettant de développer des sites web statiques",
+      "image": "projectImage4",
+      "title": "TGV Boilerplate",
+      "category": "TGV est un boilerplate personnel permettant de développer des sites web statiques sur GitHub Pages",
       "content": {
-        "text": "T.G.V. est un framework personnel permettant de développer des sites web statiques et de les déployer sur GitHub Pages.",
+        "text": "Persuadé qu'il était possible de déployer un site web statiques avec navigation sur GitHub Pages, J'ai donc créé ce boilerplate pour me faciliter la vie.",
         "technologies": "Gh-pages - Vite.js - React.js - Typescript",
         "link": "https://github.com/jcommaret/tgv"
       }
