@@ -36,8 +36,16 @@ export interface Testimonial {
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  type: 'testimonial' | 'project';
+  type: "testimonial" | "project";
   data: Project | Testimonial;
+}
+
+export interface ResponsiveImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  sizes?: string;
+  loading?: "lazy" | "eager";
 }
 
 export interface ImageAssets {
@@ -81,4 +89,3 @@ export interface MediumApiResponse {
   };
   items: MediumPost[];
 }
-
