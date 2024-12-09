@@ -1,4 +1,4 @@
-# Vite + TypeScript + Gh-Pages 
+# Vite + TypeScript + Gh-Pages
 
 This is my porfolio, using the T.G.V. (Typescript, Gh-Pages, Vite) Framework.
 
@@ -16,11 +16,11 @@ The project is deployed to [GitHub Pages](https://pages.github.com/) using the [
 - [x] Pages Navigation working with the router
 - [x] Dynamic Content by using a json file
 
-## To Do 
+## To Do
 
 - [ ] Fix the modal (working but there is a visal bug when opening it on mobile)
-- [ ] Changes images size to improve the loading time
-- [ ] Improve the scss using the BEM methodology
+- [ ] Make reponsive images work with webp compression on build
+- [ ] Make the project more dynamic by using a json file
 
 ## License
 
