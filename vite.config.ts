@@ -8,7 +8,6 @@ export default defineConfig({
     react(),
     imagetools({
       defaultDirectives: new URLSearchParams({
-        format: "webp",
         quality: "80",
         w: "300;600;900;1200",
       }),
