@@ -35,13 +35,13 @@
     },
     {
       "id": 4,
-      "image": "projectImage4",
-      "title": "T.G.V. Boilerplate",
-      "category": "Boilerplate",
+      "image": "projectImage1",
+      "title": "T.G.V. Framework",
+      "category": "Framework personnel permettant de développer des sites web statiques",
       "content": {
-        "text": "T.G.V. est un boilerplate permettant de développer des sites web statiques et de les déployer sur GitHub Pages.",
-        "technologies": "Typescript - Gh-pages - Vite.js",
-        "link": "https://github.com/jcommaret/tgv/"
+        "text": "T.G.V. est un framework personnel permettant de développer des sites web statiques et de les déployer sur GitHub Pages.",
+        "technologies": "Gh-pages - Vite.js - React.js - Typescript",
+        "link": "https://github.com/jcommaret/tgv"
       }
     }
   ]
