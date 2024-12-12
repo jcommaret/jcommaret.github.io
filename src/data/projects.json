@@ -43,6 +43,17 @@
         "technologies": "Gh-pages - Vite.js - React.js - Typescript",
         "link": "https://github.com/jcommaret/tgv"
       }
+    },
+    {
+      "id": 5,
+      "image": "projectImage5",
+      "title": "Void x Mistral",
+      "category": "Void est un IDE utilisant l'IA, Mistral est un éditeur de LLM",
+      "content": {
+        "text": "J'ai créé une premiere implémentation de Mistral dans Void, permettant d'utiliser Mistral dans l'IDE",
+        "technologies": "Typescript, React, Mistral SDK",
+        "link": "https://github.com/voideditor/void/pull/174"
+      }
     }
   ]
 }
