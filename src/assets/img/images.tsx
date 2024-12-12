@@ -1,5 +1,5 @@
 const img = {
-  myAvatar: new URL("./avatars/moi.png", import.meta.url).href,
+  moi: new URL("./avatars/moi.png", import.meta.url).href,
   iconDev: new URL("./icons/icon-dev.svg", import.meta.url).href,
   iconApp: new URL("./icons/icon-app.svg", import.meta.url).href,
   blogImage1: new URL("./blog/blog-1.webp", import.meta.url).href,
