@@ -18,18 +18,9 @@ import aboutData from "../../data/about.json";
 // Styles
 import "./index.scss";
 
-function About() {
-  const {
-    isModalOpen,
-    selectedItem: selectedTestimonial,
-    openModal,
-    closeModal,
-  } = useModal<Testimonial>({
-    image: "",
-    title: "",
-    content: {
-      text: "",
-    },
+function About() { 
+  const { 
+    isModalOpen, selectedItem: selectedTestimonial, openModal, closeModal, } = useModal<Testimonial>({ image: "",title: "", content: { text: "",}, 
   });
 
   return (
