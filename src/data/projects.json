@@ -50,9 +50,9 @@
       "title": "Void x Mistral",
       "category": "Void est un IDE utilisant l'IA, Mistral est un éditeur de LLM",
       "content": {
-        "text": "J'ai créé une premiere implémentation de Mistral dans Void, permettant d'utiliser Mistral dans l'IDE",
+        "text": "J'ai ajouté Mistral dans Void, permettant d'utiliser les différents modèles de Mistral dans l'IDE",
         "technologies": "Typescript, React, Mistral SDK",
-        "link": "https://github.com/voideditor/void/pull/174"
+        "link": "https://github.com/voideditor/void/pull/190"
       }
     }
   ]
