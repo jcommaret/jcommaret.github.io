@@ -4,6 +4,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Jérôme Commaret",
+    "url": "https://jcommaret.github.io/"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

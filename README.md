@@ -24,7 +24,20 @@ The project is deployed to [GitHub Pages](https://pages.github.com/) using the [
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Ce projet est sous licence GNU GPL v3 - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+La GPL v3 est une licence copyleft qui garantit que :
+
+- Vous pouvez utiliser ce code librement
+- Vous pouvez modifier ce code
+- Vous pouvez redistribuer ce code
+- Toute version modifiée doit également être sous licence GPL v3
+- Le code source doit toujours être disponible
+- Les modifications doivent être documentées
+
+Cette licence protège la liberté du logiciel et assure que toutes les versions dérivées resteront libres.
+
+Pour plus d'informations sur la GPL v3 : [gnu.org/licenses/gpl-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ## Author
 
