@@ -544,3 +544,88 @@ h4 {
     max-width: 700px;
   }
 }
+
+// Styles pour les éléments cliquables
+.clickable {
+  cursor: pointer;
+}
+
+// Pour les liens
+a {
+  cursor: pointer;
+}
+
+// Pour les boutons
+button {
+  cursor: pointer;
+}
+
+// Pour les éléments interactifs personnalisés
+[role="button"],
+[role="link"] {
+  cursor: pointer;
+}
+
+// Styles pour les curseurs personnalisés
+:root {
+  // Curseur par défaut
+  cursor: default;
+}
+
+// Curseurs personnalisés
+.custom-pointer {
+  // Utilisation d'une image personnalisée
+  cursor: url("/cursors/pointer.png"), pointer;
+}
+
+// Différents types de curseurs disponibles
+.cursor-types {
+  &.default {
+    cursor: default;
+  } // Curseur par défaut
+  &.pointer {
+    cursor: pointer;
+  } // Main pointante
+  &.wait {
+    cursor: wait;
+  } // Sablier ou chargement
+  &.text {
+    cursor: text;
+  } // Curseur texte (I-beam)
+  &.move {
+    cursor: move;
+  } // Curseur de déplacement
+  &.not-allowed {
+    cursor: not-allowed;
+  } // Interdit
+  &.grab {
+    cursor: grab;
+  } // Main ouverte
+  &.grabbing {
+    cursor: grabbing;
+  } // Main fermée
+  &.zoom-in {
+    cursor: zoom-in;
+  } // Zoom avant
+  &.zoom-out {
+    cursor: zoom-out;
+  } // Zoom arrière
+  &.help {
+    cursor: help;
+  } // Point d'interrogation
+}
+
+// État interactif
+.interactive {
+  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+    // Ajoutez d'autres styles pour l'état hover si nécessaire
+  }
+
+  &:active {
+    cursor: grabbing;
+    // Ajoutez d'autres styles pour l'état active si nécessaire
+  }
+}
