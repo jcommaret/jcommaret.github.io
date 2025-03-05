@@ -15,6 +15,7 @@ const img = {
   projectImage3: new URL("./projets/gdef.png", import.meta.url).href,
   projectImage4: new URL("./projets/tgv.png", import.meta.url).href,
   projectImage5: new URL("./projets/void_mistral.png", import.meta.url).href,
+  projectImage6: new URL("./projets/miaou.jpeg", import.meta.url).href,
   avatarImage1: new URL("./avatars/avatar-1.png", import.meta.url).href,
   avatarImage2: new URL("./avatars/avatar-2.png", import.meta.url).href,
   avatarImage3: new URL("./avatars/avatar-3.png", import.meta.url).href,

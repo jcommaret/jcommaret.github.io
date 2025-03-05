@@ -54,6 +54,17 @@
         "technologies": "Typescript, React, Mistral SDK",
         "link": "https://github.com/voideditor/void/pull/190"
       }
+    },
+    {
+      "id": 6,
+      "image": "projectImage6",
+      "title": "Miaou",
+      "category": "Miaou est une Application mobile qui utilise Mistral AI",
+      "content": {
+        "text": "Miaou est une application mobile développée avec React Native et TypeScript, 3 semaines avant que Le Chat soit disponible, j'ai décidé de créer une application mobile pour utiliser Mistral AI",
+        "technologies": "React Native, TypeScript",
+        "link": "https://github.com/jcommaret/miaou"
+      }
     }
   ]
 }
