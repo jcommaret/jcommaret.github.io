@@ -18,15 +18,21 @@ The project is deployed to [GitHub Pages](https://pages.github.com/) using the [
 
 ## To Do
 
-- [ ] Fix the modal (working but there is a visal bug when opening it on mobile)
-- [ ] Make reponsive images work with webp compression on build
-- [ ] Make the project more dynamic by using a json file
+
+    
+- [x] Fix the modal (working but there is a visal bug when opening it on mobile)
+- [x] Make reponsive images work with webp compression on build
+- [x] Make the project more dynamic by using a json file
 
 ## License
 
 Ce projet est sous licence GNU GPL v3 - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-La GPL v3 est une licence copyleft qui garantit que :
+
+
+
+
+La GPL v5 est une licence copyleft qui garantit que :
 
 - Vous pouvez utiliser ce code librement
 - Vous pouvez modifier ce code

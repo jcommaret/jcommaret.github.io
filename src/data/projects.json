@@ -65,6 +65,17 @@
         "technologies": "React Native, TypeScript",
         "link": "https://github.com/jcommaret/miaou"
       }
+    },
+    {
+      "id": 7,
+      "image": "projectImage7",
+      "title": "Voicia",
+      "category": "Voicia est une application mobile qui utilise la reconnaisance vocale et le text to speech avec Mistral AI",
+      "content": {
+        "text": "Voicia est une application mobile développée avec React Native et TypeScript, elle utilise la reconnaisance vocale et le text to speech avec Mistral AI",
+        "technologies": "React Native, TypeScript",
+        "link": "https://github.com/jcommaret/voicetral"
+      }
     }
   ]
 }
