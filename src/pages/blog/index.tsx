@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-
+import sanitizeHtml from 'sanitize-html';
 import { MediumPost, MediumApiResponse } from '../../types/types';
 
 import img from '../../assets/img/images';
@@ -39,7 +39,7 @@ function Blog() {
           categories: item.categories,
           pubDate: new Date(item.pubDate).toLocaleDateString('fr-FR'),
           link: item.link,
-          description: item.description.replace(/<[^>]*>/g, '').slice(0, 150) + '...'
+          description: sanitizeHtml(item.description, { allowedTags: [], allowedAttributes: {} }).slice(0, 150) + '...'
         })));
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Une erreur est survenue');
