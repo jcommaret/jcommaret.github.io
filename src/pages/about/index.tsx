@@ -13,20 +13,34 @@ import { Testimonial } from "../../types/types";
 import img from "../../assets/img/images";
 
 // Data
+import siteData from "../../data/site.json";
 import aboutData from "../../data/about.json";
 
 // Styles
 import "./index.scss";
+import { Helmet } from "react-helmet-async";
 
 function About() { 
+  const siteName = siteData.name;
+  const pageName = aboutData.pageName;
+  const pageDescription = aboutData.pageDescription;
   const { 
     isModalOpen, selectedItem: selectedTestimonial, openModal, closeModal, } = useModal<Testimonial>({ image: "",title: "", content: { text: "",}, 
   });
 
   return (
+    <>
+       <Helmet title={ siteName + ' - ' + pageName }
+          meta={[
+            { name: 'description', content: pageDescription },
+            { property: 'og:title', content: siteName + ' - ' + pageName },
+            { property: 'og:description', content: pageDescription }
+          ]}>
+      </Helmet>
+   
     <article className="about active" data-page="about">
       <header>
-        <h2>A propos</h2>
+        <h2>{pageName}</h2>
       </header>
 
       <section className="about-text">
@@ -103,6 +117,7 @@ function About() {
         data={selectedTestimonial}
       />
     </article>
+    </>
   );
 }
 export default About;

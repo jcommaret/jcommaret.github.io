@@ -1,6 +1,8 @@
 {
+  "pageName": "A propos",
+  "pageDescription": "Développeur Fullstack - React, React Native, Flutter, Wordpress",
   "aboutText": [
-    "Je suis un développeur web et mobile basé à Paris.",
+    "Je suis un développeur fullstack basé à Paris. A l'aise aussi bien sur le web que sur mobile, je suis à votre disposition pour réaliser vos projets.",
     "Avec un regard porté sur les performances, je code, je manage, et j'innove.",
     "Polyvalent, j'ai déjà travaillé pour des grands groupes internationnaux mais également pour des startups.",
     "J'ai une très bonne maitrise de la chaine de production grâce à des expériences en gestion de projet technique et fonctionnelle."

@@ -4,9 +4,11 @@ import { Project } from "../../types/types";
 import Modal from "../../components/modal";
 import img from "../../assets/img/images";
 import projectsData from "../../data/projects.json";
+import siteData from '../../data/site.json';
 import ResponsiveImage from "../../components/responsiveImage";
 
 import "./index.scss";
+import { Helmet } from "react-helmet-async";
 
 function Portfolio() {
   const {
@@ -25,11 +27,23 @@ function Portfolio() {
     },
   });
 
+  const siteName = siteData.name;
+  const pageName = projectsData.pageName;
+  const pageDescription = projectsData.pageDescription;
   return (
-    <article className="portfolio active">
-      <header>
-        <h2>Mes projets</h2>
-      </header>
+    <>
+      <Helmet title={ siteName + ' - ' + pageName }
+          meta={[
+            { name: 'description', content: pageDescription },
+            { property: 'og:title', content: siteName + ' - ' + pageName },
+            { property: 'og:description', content: pageDescription }
+          ]}>
+      </Helmet>
+
+      <article className="portfolio active">
+        <header>
+          <h2>{pageName}</h2>
+        </header>
 
       <section className="projects">
         <ul className="project-list">
@@ -69,6 +83,7 @@ function Portfolio() {
         data={selectedProject}
       />
     </article>
+    </>
   );
 }
 export default Portfolio;

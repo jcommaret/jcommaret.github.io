@@ -1,4 +1,6 @@
 {
+  "pageName": "CV",
+  "pageDescription": "Voici mes différentes expériences professionnelles.",
   "experiences": [
     {
       "title": "Intervenant @ Efrei",

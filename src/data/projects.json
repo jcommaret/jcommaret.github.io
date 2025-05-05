@@ -1,4 +1,6 @@
 {
+  "pageName" : "Mes Projets",
+  "pageDescription" : "Voici quelques projets sur lesquels j'ai travaillé.",
   "projects": [
     {
       "id": 1,
