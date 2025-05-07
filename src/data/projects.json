@@ -31,8 +31,8 @@
       "category": "Application mobile",
       "content": {
         "text": "Le grand dictionnaire Estonien Français",
-        "technologies": "Vite, Capacitor",
-        "link": "https://github.com/votre-repo"
+        "technologies": "React Native, Expo",
+        "link": "https://github.com/jcommaret/GDEF"
       }
     },
     {
@@ -54,7 +54,7 @@
       "content": {
         "text": "J'ai ajouté Mistral dans Void, permettant d'utiliser les différents modèles de Mistral dans l'IDE",
         "technologies": "Typescript, React, Mistral SDK",
-        "link": "https://github.com/voideditor/void/pull/190"
+        "link": "https://github.com/voideditor/void"
       }
     },
     {
