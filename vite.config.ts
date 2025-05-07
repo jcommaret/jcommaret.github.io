@@ -7,12 +7,14 @@ export default defineConfig({
     react(),
     sitemap({ 
       hostname: 'https://jcommaret.github.io', 
+      changefreq: 'monthly', 
+      priority: 0.8, 
       dynamicRoutes: [
         '/',
         '/#/about',
         '/#/projects',
         '/#/resume'
-      ]
+      ],
      })
   ],
   base: "",
