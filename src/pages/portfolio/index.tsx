@@ -4,8 +4,8 @@ import { Project } from "../../types/types";
 import Modal from "../../components/modal";
 import img from "../../assets/img/images";
 import projectsData from "../../data/projects.json";
-import siteData from '../../data/site.json';
 import ResponsiveImage from "../../components/responsiveImage";
+import { pageSEO, defaultSEO } from '../../utils/seo';
 
 import "./index.scss";
 import { Helmet } from "react-helmet-async";
@@ -27,17 +27,19 @@ function Portfolio() {
     },
   });
 
-  const siteName = siteData.name;
   const pageName = projectsData.pageName;
-  const pageDescription = projectsData.pageDescription;
   return (
     <>
-      <Helmet title={ siteName + ' - ' + pageName }
-          meta={[
-            { name: 'description', content: pageDescription },
-            { property: 'og:title', content: siteName + ' - ' + pageName },
-            { property: 'og:description', content: pageDescription }
-          ]}>
+      <Helmet>
+          <title>{pageSEO.portfolio.title}</title>
+          <meta name="description" content={pageSEO.portfolio.description} />
+          <meta name="keywords" content={pageSEO.portfolio.keywords} />
+          <meta property="og:title" content={pageSEO.portfolio.title} />
+          <meta property="og:description" content={pageSEO.portfolio.description} />
+          <meta property="og:url" content={`${defaultSEO.siteUrl}#/projets`} />
+          <meta name="twitter:title" content={pageSEO.portfolio.title} />
+          <meta name="twitter:description" content={pageSEO.portfolio.description} />
+          <link rel="canonical" href={`${defaultSEO.siteUrl}#/projets`} />
       </Helmet>
 
       <article className="portfolio active">

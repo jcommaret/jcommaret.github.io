@@ -11,12 +11,14 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run copy-404",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "generate-sitemap": "node generateSitemap.js"
+    "generate-sitemap": "node generateSitemap.js",
+    "copy-404": "cp dist/index.html dist/404.html",
+    "seo-check": "echo 'Vérifiez votre SEO avec:' && echo '1. Google Lighthouse' && echo '2. https://search.google.com/test/rich-results' && echo '3. https://pagespeed.web.dev/'"
   },
   "dependencies": {
     "@ionic/react": "^8.2.6",

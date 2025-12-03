@@ -1,25 +1,25 @@
 import { IonIcon } from '@ionic/react';
 import { bookOutline } from 'ionicons/icons';
 import resumeData from '../../data/resume.json';
-import siteData from '../../data/site.json';
+import { pageSEO, defaultSEO } from '../../utils/seo';
 
 import './index.scss';
 import { Helmet } from 'react-helmet-async';
 
 function Resume() {
-  const siteName = siteData.name;
-  const pageName = resumeData.pageName; 
-  const pageDescription = resumeData.pageDescription;   
+  const pageName = resumeData.pageName;
   return(
     <>
-      <Helmet title={ siteName + ' - ' + pageName }
-          meta={[
-            { name: 'description', content: pageDescription },
-            { property: 'og:title', content: siteName + ' - ' + pageName },
-            { property: 'og:description', content: pageDescription },
-            { property: 'twitter:title', content: siteName + ' - ' + pageName }, 
-            { property: 'twitter:description', content: pageDescription },
-          ]}>
+      <Helmet>
+          <title>{pageSEO.resume.title}</title>
+          <meta name="description" content={pageSEO.resume.description} />
+          <meta name="keywords" content={pageSEO.resume.keywords} />
+          <meta property="og:title" content={pageSEO.resume.title} />
+          <meta property="og:description" content={pageSEO.resume.description} />
+          <meta property="og:url" content={`${defaultSEO.siteUrl}#/resume`} />
+          <meta name="twitter:title" content={pageSEO.resume.title} />
+          <meta name="twitter:description" content={pageSEO.resume.description} />
+          <link rel="canonical" href={`${defaultSEO.siteUrl}#/resume`} />
       </Helmet>
 
       <article className="resume active">

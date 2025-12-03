@@ -13,29 +13,33 @@ import { Testimonial } from "../../types/types";
 import img from "../../assets/img/images";
 
 // Data
-import siteData from "../../data/site.json";
 import aboutData from "../../data/about.json";
+
+// SEO
+import { pageSEO, defaultSEO } from "../../utils/seo";
 
 // Styles
 import "./index.scss";
 import { Helmet } from "react-helmet-async";
 
 function About() { 
-  const siteName = siteData.name;
   const pageName = aboutData.pageName;
-  const pageDescription = aboutData.pageDescription;
   const { 
     isModalOpen, selectedItem: selectedTestimonial, openModal, closeModal, } = useModal<Testimonial>({ image: "",title: "", content: { text: "",}, 
   });
 
   return (
     <>
-       <Helmet title={ siteName + ' - ' + pageName }
-          meta={[
-            { name: 'description', content: pageDescription },
-            { property: 'og:title', content: siteName + ' - ' + pageName },
-            { property: 'og:description', content: pageDescription }
-          ]}>
+       <Helmet>
+          <title>{pageSEO.about.title}</title>
+          <meta name="description" content={pageSEO.about.description} />
+          <meta name="keywords" content={pageSEO.about.keywords} />
+          <meta property="og:title" content={pageSEO.about.title} />
+          <meta property="og:description" content={pageSEO.about.description} />
+          <meta property="og:url" content={`${defaultSEO.siteUrl}#/about`} />
+          <meta name="twitter:title" content={pageSEO.about.title} />
+          <meta name="twitter:description" content={pageSEO.about.description} />
+          <link rel="canonical" href={`${defaultSEO.siteUrl}#/about`} />
       </Helmet>
    
     <article className="about active" data-page="about">

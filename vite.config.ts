@@ -12,7 +12,7 @@ export default defineConfig({
       dynamicRoutes: [
         '/',
         '/#/about',
-        '/#/projects',
+        '/#/projets',
         '/#/resume'
       ],
      })
