@@ -10,7 +10,7 @@ Portfolio de **Jérôme Commaret**, développeur fullstack et lead front-end à 
 - [Vite 8](https://vite.dev/) et [TypeScript](https://www.typescriptlang.org/) strict
 - CSS moderne sans préprocesseur : `@layer`, imbrication native, couleurs `oklch()`, thèmes clair et sombre avec `light-dark()`, View Transitions, animations au défilement
 - Polices auto-hébergées via [Fontsource](https://fontsource.org/) : Geist, Geist Mono, Instrument Serif
-- Hébergement sur [GitHub Pages](https://pages.github.com/)
+- Hébergement sur [GitHub Pages](https://pages.github.com/), publié automatiquement par GitHub Actions
 
 ## Démarrer
 
@@ -49,11 +49,15 @@ Pour modifier le contenu (projets, expériences, témoignages), il suffit d'édi
 
 ## Déploiement
 
+Chaque push sur `master` publie le site : le workflow [`deploy.yml`](.github/workflows/deploy.yml) lance `npm run build`, puis envoie `build/client` sur GitHub Pages. Pour le relancer à la main, utiliser « Run workflow » dans l'onglet Actions, ou :
+
 ```bash
-npm run deploy
+gh workflow run deploy.yml
 ```
 
-Le site est publié sur la branche `gh-pages`. Le script `postbuild` copie la coquille SPA en `404.html` : GitHub Pages la sert pour toute URL inconnue, et l'application affiche alors sa page 404.
+La source de GitHub Pages doit être réglée sur **GitHub Actions** (Settings → Pages → Build and deployment → Source).
+
+Le script `postbuild` copie la coquille SPA en `404.html` : GitHub Pages la sert pour toute URL inconnue, et l'application affiche alors sa page 404.
 
 ## SEO
 
