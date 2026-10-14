@@ -1,50 +1,70 @@
-# Vite + TypeScript + Gh-Pages
+# jcommaret.github.io
 
-This is my porfolio, using the T.G.V. (Typescript, Gh-Pages, Vite) Framework.
+Portfolio de **Jérôme Commaret**, développeur fullstack et lead front-end à Paris.
+→ [jcommaret.github.io](https://jcommaret.github.io/)
 
-The project is build with the help of the [Vite](https://vitejs.dev/) framework, and the code is written in [Typescript](https://www.typescriptlang.org/).
+## Stack
 
-The project is deployed to [GitHub Pages](https://pages.github.com/) using the [gh-pages](https://github.com/tschaub/gh-pages) package.
+- [React 19](https://react.dev/) et [React Router 8](https://reactrouter.com/) en mode framework
+- **Prérendu statique** : chaque page est générée en HTML au build (SEO, partage social), puis hydratée côté client
+- [Vite 8](https://vite.dev/) et [TypeScript](https://www.typescriptlang.org/) strict
+- CSS moderne sans préprocesseur : `@layer`, imbrication native, couleurs `oklch()`, thèmes clair et sombre avec `light-dark()`, View Transitions, animations au défilement
+- Polices auto-hébergées via [Fontsource](https://fontsource.org/) : Geist, Geist Mono, Instrument Serif
+- Hébergement sur [GitHub Pages](https://pages.github.com/)
 
-## Features
+## Démarrer
 
-- [x] Typescript
-- [x] Gh-Pages
-- [x] Vite
-- [x] Responsive Design
-- [x] Smooth Scrolling
-- [x] Pages Navigation working with the router
-- [x] Dynamic Content by using a json file
+```bash
+npm install
+npm run dev
+```
 
-## To Do
+| Script              | Rôle                                                          |
+| ------------------- | ------------------------------------------------------------- |
+| `npm run dev`       | Serveur de développement                                      |
+| `npm run build`     | Build de production et prérendu des pages dans `build/client` |
+| `npm run preview`   | Sert le build de production en local                          |
+| `npm run typecheck` | Génère les types des routes puis lance TypeScript             |
+| `npm run lint`      | ESLint                                                        |
+| `npm run format`    | Formate le code avec Prettier                                 |
+| `npm run check`     | Lint, types et formatage, comme en CI                         |
+| `npm run deploy`    | Build puis publication sur la branche `gh-pages`              |
 
+## Structure
 
-    
-- [x] Fix the modal (working but there is a visal bug when opening it on mobile)
-- [x] Make reponsive images work with webp compression on build
-- [x] Make the project more dynamic by using a json file
+```
+app/
+├── root.tsx          Document HTML, thème, analytics, page d'erreur / 404
+├── routes.ts         Déclaration des routes : /, /projets/, /cv/
+├── routes/           Une page par fichier, avec ses balises meta
+├── components/       En-tête, pied de page, cartes, icônes…
+├── content/          Contenu typé : profil, projets, CV, témoignages
+├── lib/seo.ts        Balises meta, Open Graph et JSON-LD
+├── styles/           Design tokens, base, composants, animations
+└── assets/           Portrait et visuels des projets (WebP)
+public/               favicon, robots.txt, sitemap.xml, humans.txt
+```
 
-## License
+Pour modifier le contenu (projets, expériences, témoignages), il suffit d'éditer les fichiers de `app/content/`.
 
-Ce projet est sous licence GNU GPL v3 - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+## Déploiement
 
+```bash
+npm run deploy
+```
 
+Le site est publié sur la branche `gh-pages`. Le script `postbuild` copie la coquille SPA en `404.html` : GitHub Pages la sert pour toute URL inconnue, et l'application affiche alors sa page 404.
 
+## SEO
 
+Voir [docs/SEO.md](docs/SEO.md).
 
-La GPL v5 est une licence copyleft qui garantit que :
+## Contribuer
 
-- Vous pouvez utiliser ce code librement
-- Vous pouvez modifier ce code
-- Vous pouvez redistribuer ce code
-- Toute version modifiée doit également être sous licence GPL v3
-- Le code source doit toujours être disponible
-- Les modifications doivent être documentées
+Les commits suivent [Conventional Commits](https://www.conventionalcommits.org/fr/v1.0.0/), vérifiés par commitlint en local et en CI. Voir [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Cette licence protège la liberté du logiciel et assure que toutes les versions dérivées resteront libres.
+## Licence
 
-Pour plus d'informations sur la GPL v3 : [gnu.org/licenses/gpl-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+Code sous licence [GNU GPL v3](LICENSE.MD). Toute version modifiée doit rester sous GPL v3, avec son code source disponible.
 
-## Author
-
-This project was created by [@jcommaret](https://github.com/jcommaret) using [codewithsadee](https://github.com/codewithsadee) static html template.
+La première version de ce site s'appuyait sur le template vCard de [codewithsadee](https://github.com/codewithsadee). La v2 est une refonte complète.

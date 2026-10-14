@@ -2,52 +2,63 @@
   "name": "portfolio",
   "homepage": "https://jcommaret.github.io/",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
   "license": "GPL-3.0",
   "author": {
     "name": "Jérôme Commaret",
     "url": "https://jcommaret.github.io/"
   },
+  "engines": {
+    "node": ">=22.22.0"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build && npm run copy-404",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "dev": "react-router dev",
+    "build": "react-router build && node scripts/postbuild.mjs",
+    "preview": "vite preview --outDir build/client",
+    "typecheck": "react-router typegen && tsc",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run lint && npm run typecheck && npm run format:check",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "generate-sitemap": "node generateSitemap.js",
-    "copy-404": "cp dist/index.html dist/404.html",
-    "seo-check": "echo 'Vérifiez votre SEO avec:' && echo '1. Google Lighthouse' && echo '2. https://search.google.com/test/rich-results' && echo '3. https://pagespeed.web.dev/'"
+    "deploy": "gh-pages -d build/client --nojekyll",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@ionic/react": "^8.2.6",
-    "ionicons": "^7.4.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^6.26.0",
-    "sanitize-html": "^2.15.0",
-    "sharp": "^0.33.5",
-    "vite-imagetools": "^7.0.5"
+    "@fontsource-variable/geist": "^5.3.0",
+    "@fontsource-variable/geist-mono": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "isbot": "^5.2.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router": "^8.4.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@types/react-helmet": "^6.1.11",
-    "@types/sanitize-html": "^2.15.0",
-    "@types/sass": "^1.43.1",
-    "@typescript-eslint/eslint-plugin": "^8.15.0",
-    "@typescript-eslint/parser": "^8.15.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^8.57.1",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "gh-pages": "^6.1.1",
-    "sass": "^1.81.0",
-    "typescript": "^5.2.2",
-    "vite": "^7.2.2",
-    "vite-plugin-sitemap": "^0.7.1"
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "@eslint/js": "^10.0.1",
+    "@react-router/dev": "^8.4.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^10.12.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2",
+    "vite": "^8.3.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,json,md,yml,yaml,html}": "prettier --write"
   }
 }

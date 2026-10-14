@@ -1,0 +1,11 @@
+/* TEAM */
+Développeur : Jérôme Commaret
+Contact : jcommaret [at] gmail.com
+GitHub : https://github.com/jcommaret
+Localisation : Paris, France
+
+/* SITE */
+Langue : Français
+Standards : HTML5, CSS3, TypeScript
+Composants : React, React Router, Vite
+Polices : Geist, Geist Mono, Instrument Serif
