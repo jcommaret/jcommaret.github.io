@@ -28,7 +28,6 @@ npm run dev
 | `npm run lint`      | ESLint                                                        |
 | `npm run format`    | Formate le code avec Prettier                                 |
 | `npm run check`     | Lint, types et formatage, comme en CI                         |
-| `npm run deploy`    | Build puis publication sur la branche `gh-pages`              |
 
 ## Structure
 
